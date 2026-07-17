@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.github.io/drive-kktc/sitemap.xml
+Sitemap: https://22321363.github.io/Drive-KKTC/sitemap.xml
