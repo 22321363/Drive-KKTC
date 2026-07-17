@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+
+    <g stroke="#B22222" stroke-width="3" fill="none" opacity="0.18">
+
+        <!-- Ground -->
+        <path d="M80 420 H1120"></path>
+
+        <!-- Left arch -->
+        <path d="M180 420 V250
+                 Q180 170 260 170
+                 Q340 170 340 250
+                 V420"></path>
+
+        <!-- Center gate -->
+        <path d="M470 420 V180
+                 H730
+                 V420"></path>
+
+        <path d="M520 420
+                 V260
+                 Q520 190 600 190
+                 Q680 190 680 260
+                 V420"></path>
+
+        <!-- Right arch -->
+        <path d="M860 420 V250
+                 Q860 170 940 170
+                 Q1020 170 1020 250
+                 V420"></path>
+
+        <!-- Decorative domes -->
+        <path d="M240 170 Q260 130 280 170"></path>
+        <path d="M580 190 Q600 140 620 190"></path>
+        <path d="M920 170 Q940 130 960 170"></path>
+
+    </g>
+
+</svg>

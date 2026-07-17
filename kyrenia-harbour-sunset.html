@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Kyrenia Harbour, Castle &amp; Sunset Walk | Drive KKTC</title>
+  <meta content="Follow a simple Kyrenia route through the harbour, castle, shipwreck museum, old streets and a slow sunset finish by the water." name="description" />
+  <link href="https://example.github.io/drive-kktc/kyrenia-harbour-sunset.html" rel="canonical" />
+  <link href="images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://example.github.io/drive-kktc/kyrenia-harbour-sunset.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/kyrenia/kyrenia-harbour-sunset-cover.jpg" property="og:image" />
+  <meta content="Follow a simple Kyrenia route through the harbour, castle, shipwreck museum, old streets and a slow sunset finish by the water." property="og:description" />
+  <meta content="Kyrenia Harbour, Castle &amp; Sunset Walk" property="og:title" />
+  <meta content="website" property="og:type" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="kyrenia">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logo" src="images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menu</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Routes</a>
+    <a href="index.html#about">About</a>
+    <a href="practical-info.html">Practical Info</a>
+
+    <div class="language-switch">
+        <a href="index.html" class="active">EN</a>
+        <span>|</span>
+        <a href="tr/kyrenia-harbour-sunset.html">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img:url('images/kyrenia/kyrenia-harbour-sunset-cover.jpg')">
+      <div class="theme-scene"><span class="wave-strip"></span><span class="wave-strip wave-2"></span><span class="boat">⛵</span></div>
+      <div class="hero-pattern">
+    <img src="images/hero-svg/kyrenia-bg.svg" alt="">
+</div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">routes</a> / Kyrenia Harbour, Castle &amp; Sunset Walk</div>
+        <span class="genre-badge">🌊 Sea Route</span>
+        <span class="eyebrow">harbour walk · history · sunset</span>
+        <h1>Kyrenia Harbour, Castle &amp; Sunset Walk</h1>
+        <p>A classic Kyrenia route built around the harbour, castle walls, museums, sea views and a slow sunset finish.</p>
+        <div class="tag-row"><span class="tag">harbour</span><span class="tag">castle</span><span class="tag">sea</span><span class="tag">sunset</span></div>
+        <div class="overview">
+          <div class="overview-card"><span>route distance</span><strong>approx. 3 km</strong></div>
+          <div class="overview-card"><span>duration</span><strong>3–4 hours (6 stops)</strong></div>
+          <div class="overview-card"><span>best time</span><strong>late afternoon to sunset</strong></div>
+          <div class="overview-card"><span>start / end</span><strong>Kyrenia Harbour</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">view map</a>
+          <a class="btn btn-ghost" href="Kyrenia.pdf" target="_blank" download>Download Route PDF</a>
+          <button class="btn btn-ghost" data-share="" data-text="Walk the medieval maritime harbor lines down to the sunset views." data-title="Kyrenia Harbour Deck">share route</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Did you know?</h2>
+          <p>The ship inside the Shipwreck Museum sailed the Mediterranean around 300 BC and sank just off Kyrenia — it's the oldest Greek merchant ship ever recovered. A local diver found it by accident in 1965, and it took archaeologists years to raise and piece the hull back together.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Interactive Route Timeline</h2>
+          <p>Use this embedded map to get a quick sense of the route before you set off, then follow the stops in order below.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#0f6fb3';
+          window.ROUTE_STOPS = [{
+            "name": "Kyrenia Harbour",
+            "lat": 35.3417,
+            "lng": 33.3192,
+            "id": "stop-1"
+          }, {
+            "name": "Kyrenia Castle",
+            "lat": 35.3410,
+            "lng": 33.3213,
+            "id": "stop-2"
+          }, {
+            "name": "Shipwreck Museum",
+            "lat": 35.3412,
+            "lng": 33.3210,
+            "id": "stop-3"
+          }, {
+            "name": "Old Town Streets",
+            "lat": 35.3400,
+            "lng": 33.3180,
+            "id": "stop-4"
+          }, {
+            "name": "Girne Castle Sea View Lookouts",
+            "lat": 35.3396,
+            "lng": 33.3176,
+            "id": "stop-5"
+          }, {
+            "name": "Harbour Sunset Finish",
+            "lat": 35.3420,
+            "lng": 33.3195,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.3410, 33.3195];
+          window.ROUTE_ZOOM = 15;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Stops</h2>
+          <p>Follow the timeline in order, but keep the route flexible depending on time, weather and opening hours.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Harbour</a><a href="#stop-2">2. Castle</a><a href="#stop-3">3. Shipwreck</a>
+          <a href="#stop-4">4. Old Town</a><a href="#stop-5">5. Sea View Lookouts</a><a href="#stop-6">6. Sunset Finish</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Kyrenia Harbour" class="cover" loading="lazy" src="images/kyrenia/kyrenia-harbour-boats.jpg" />
+            <h3>Kyrenia Harbour</h3>
+            <p>Start with the most recognizable view in Kyrenia. Enjoy the sea breeze, moored boats, and relaxed waterfront cafes.</p>
+            <a href="https://maps.google.com/?q=35.3417,33.3192" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Kyrenia's horseshoe-shaped harbour dates back to the Venetian period and remains the most photographed spot in town, ringed by old stone warehouses that have been converted into restaurants and cafés.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-1"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 5 mins walk (400m) along the pier</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Kyrenia Castle" class="cover" loading="lazy" src="images/kyrenia/kyrenia-castle-exterior.jpg" />
+            <h3>Kyrenia Castle</h3>
+            <p>Move from the harbour into the massive stone fort walls that form the historical core of Kyrenia.</p>
+            <a href="https://maps.google.com/?q=35.3410,33.3213" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The Byzantines built the first fortress here in the 7th century to guard against Arab raids. It was captured by Richard the Lionheart in 1191, expanded by the Lusignans, and took its current form under Venetian rule around 1489.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-2"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 2 mins walk inside the castle walls</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="Shipwreck Museum" class="cover" loading="lazy" src="images/kyrenia/shipwreck-museum.jpg" />
+            <h3>Shipwreck Museum</h3>
+            <p>Located directly inside the castle grounds, this museum showcases one of the oldest recovered merchant shipwrecks in existence.</p>
+            <a href="https://maps.google.com/?q=35.3412,33.3210" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The ship on display sank around 300 BC and is the oldest Greek merchant vessel ever recovered — found by a local diver in 1965 and painstakingly reassembled piece by piece after a multi-year excavation.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-3"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 10 mins walk (800m) into the narrow backstreets</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="Old Town Streets" class="cover" loading="lazy" src="images/kyrenia/kyrenia-old-town-street.jpg" />
+            <h3>Old Town Streets</h3>
+            <p>Wind through narrow stone-paved lanes directly behind the harbor line, packed with historic local character.</p>
+            <a href="https://maps.google.com/?q=35.3400,33.3180" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>These lanes sit just behind the harbour front and retain much of Kyrenia's pre-tourism character, with narrow stone alleys that are far quieter than the waterfront just a few steps away.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-4"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 5 mins walk (300m) uphill</div>
+          <article class="stop-card" id="stop-5">
+            <span class="badge-photo">📸 Best Photo Spot</span>
+            <img alt="Panoramic Mediterranean horizon viewed from Kyrenia Castle battlements" class="cover" loading="lazy" src="images/kyrenia/girne-castle-sea-view.jpg" />
+            <h3>Girne Castle Sea View Lookouts</h3>
+            <p>Climb up onto the expansive defensive walls to capture stunning ocean vistas. This panoramic viewpoint provides historical context.</p>
+            <a href="https://maps.google.com/?q=35.3396,33.3176" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The castle's sea view terraces provide visitors with stunning panoramic views of Kyrenia Harbour, making them one of the best locations for photography and sightseeing.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-5">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 10 mins walk back to the waterfront</div>
+          <article class="stop-card" id="stop-6">
+            <img alt="Harbour Sunset Finish" class="cover" loading="lazy" src="images/kyrenia/kyrenia-seafront-sunset-walk.jpg" />
+            <h3>Harbour Sunset Finish</h3>
+            <p>Return to the harbor stone wall edge for sunset. It makes an ideal endpoint for seaside dining and evening photos.</p>
+            <a href="https://maps.google.com/?q=35.3420,33.3195" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>As the sun drops, the harbour stones and old warehouse façades pick up a warm golden light — locals consider this the best hour of the day to be here, whether for photos or just a slow walk.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-6"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Practical info</h2>
+            <ul>
+              <li>This route is easy on foot once you are in central Kyrenia.</li>
+              <li>Parking can be busy, so arrive before sunset time.</li>
+              <li>Keep the castle/museum stop earlier to avoid closing-time problems.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>Insider tip</h2>
+            <p>If you have extra time after visiting the castle, walk beyond the main harbour cafés into the smaller side streets. They're often quieter and offer local shops and hidden viewpoints away from the busiest tourist areas.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Listen to the Harbour Sunset Tip:</p>
+              <audio aria-label="Audio narration of the insider tip above" controls="" preload="none">
+                <source src="audio/kyrenia-tip.mp3" type="audio/mpeg" /> Your browser does not support the audio element.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Read the transcript</summary>
+                <p>Heading down to the harbor? Timing is everything. Do not arrive too late in the afternoon or you will completely miss the castle hours. Head straight into Kyrenia Castle first while it is open, explore the battlements, and then time it perfectly so you can step right out onto the harbor stones exactly as the golden hour sets in.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span class="footer-flag"><img alt="TRNC flag" src="images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span><span>route pages built for Northern Cyprus discovery</span></div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

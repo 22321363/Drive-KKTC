@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 900" width="100%" height="100%"><g transform="translate(0,180)">
+
+  <!-- Background -->
+  <rect width="360" height="900" fill="none"/>
+  
+  <!-- Mountains -->
+  <path d="M -10,480 L 90,320 L 180,460" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 120,460 L 220,260 L 310,440" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 250,440 L 310,330 L 370,420" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- Ground Curve -->
+  <path d="M -10,480 Q 180,460 370,480" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Trees -->
+  <!-- Left Tree -->
+  <g>
+    <line x1="55" y1="482" x2="55" y2="437" stroke="#A9BCAE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 47,457 L 55,449 L 63,457" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 49,448 L 55,441 L 61,448" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 51,439 L 55,433 L 59,439" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <!-- Middle Tree -->
+  <g>
+    <line x1="135" y1="465" x2="135" y2="420" stroke="#A9BCAE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 127,440 L 135,432 L 143,440" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 129,431 L 135,424 L 141,431" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 131,422 L 135,416 L 139,422" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <!-- Right Tree -->
+  <g>
+    <line x1="255" y1="450" x2="255" y2="405" stroke="#A9BCAE" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 247,425 L 255,417 L 263,425" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 249,416 L 255,409 L 261,416" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 251,407 L 255,401 L 259,407" fill="none" stroke="#A9BCAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+</g></svg>

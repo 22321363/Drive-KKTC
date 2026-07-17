@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Dipkarpaz, Wild Donkeys &amp; Apostolos Andreas | Drive KKTC</title>
+  <meta content="Plan a Karpaz road trip through Dipkarpaz village, scenic roads, wild donkeys, Apostolos Andreas Monastery and far-east viewpoints." name="description" />
+  <link href="https://example.github.io/drive-kktc/dipkarpaz-apostolos.html" rel="canonical" />
+  <link href="images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="website" property="og:type" />
+  <meta content="Dipkarpaz, Wild Donkeys &amp; Apostolos Andreas" property="og:title" />
+  <meta content="Plan a Karpaz road trip through Dipkarpaz village, scenic roads, wild donkeys, Apostolos Andreas Monastery and far-east viewpoints." property="og:description" />
+  <meta content="https://example.github.io/drive-kktc/dipkarpaz-apostolos.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/karpaz/karpaz-peninsula-road.jpg" property="og:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="karpaz">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logo" src="images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menu</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Routes</a>
+    <a href="index.html#about">About</a>
+    <a href="practical-info.html">Practical Info</a>
+
+    <div class="language-switch">
+        <a href="index.html" class="active">EN</a>
+        <span>|</span>
+        <a href="tr/dipkarpaz-apostolos.html">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img: url('images/karpaz/karpaz-peninsula-road.jpg')">
+      <div class="theme-scene"><span class="sun-glow"></span><span class="donkey">🐴</span></div>
+     <div class="hero-pattern">
+    <img
+        class="hero-svg"
+        src="images/hero-svg/karpaz-bg.svg"
+        alt="">
+</div>
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html">routes</a> / Dipkarpaz Village, Wild Donkeys &amp; Apostolos Andreas Route
+        </nav>
+        <span class="genre-badge">🏖️ Nature Route</span>
+        <span class="eyebrow">road trip · nature · far east</span>
+        <h1>Dipkarpaz Village, Wild Donkeys &amp; Apostolos Andreas Route</h1>
+        <p>A full-day road trip to the far east of Northern Cyprus, built around village life, open landscapes, wild donkeys and Apostolos Andreas.</p>
+        <div class="tag-row">
+          <span class="tag">nature</span>
+          <span class="tag">road trip</span>
+          <span class="tag">donkeys</span>
+          <span class="tag">monastery</span>
+        </div>
+        <div class="overview">
+          <div class="overview-card"><span>route distance</span><strong>approx. 45 km</strong></div>
+          <div class="overview-card"><span>duration</span><strong>Full day (6 stops)</strong></div>
+          <div class="overview-card"><span>best time</span><strong>early start</strong></div>
+          <div class="overview-card"><span>start / end</span><strong>Dipkarpaz / Zafer Burnu</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">view map</a>
+          <a class="btn btn-ghost" href="Karpaz.pdf" target="_blank" download>Download Route PDF</a>
+          <button class="btn btn-ghost" data-share="" data-text="Check out this live road trip timeline for Karpaz!" data-title="Karpaz Track Guide">share route</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Did you know?</h2>
+          <p>The Karpaz Peninsula's wild donkeys aren't actually wild in the strictest sense — they're descendants of farm donkeys abandoned decades ago as tractors took over their work. They're now a protected symbol of the peninsula and roam freely across the national park.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Interactive Route Timeline</h2>
+          <p>Track your coordinates along the remote peninsula highways using our live mapping plugin loop.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#9c6b05';
+          window.ROUTE_STOPS = [{
+            "name": "Dipkarpaz Village",
+            "lat": 35.5978,
+            "lng": 34.3775,
+            "id": "stop-1"
+          }, {
+            "name": "Karpaz Scenic Drive",
+            "lat": 35.6180,
+            "lng": 34.4450,
+            "id": "stop-2"
+          }, {
+            "name": "Wild Donkey Area",
+            "lat": 35.6320,
+            "lng": 34.5150,
+            "id": "stop-3"
+          }, {
+            "name": "Apostolos Andreas Monastery",
+            "lat": 35.6644,
+            "lng": 34.5786,
+            "id": "stop-4"
+          }, {
+            "name": "Coastal View / Beach Stop",
+            "lat": 35.6450,
+            "lng": 34.5450,
+            "id": "stop-5"
+          }, {
+            "name": "Zafer Burnu Direction / Far-East Viewpoint",
+            "lat": 35.6706,
+            "lng": 34.5892,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.6300, 34.4700];
+          window.ROUTE_ZOOM = 11;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Route Itinerary</h2>
+          <p>Follow the timeline in order, but keep the route flexible depending on time, weather and opening hours.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Dipkarpaz Village</a>
+          <a href="#stop-2">2. Karpaz Scenic Drive</a>
+          <a href="#stop-3">3. Wild Donkey Area</a>
+          <a href="#stop-4">4. Apostolos Andreas</a>
+          <a href="#stop-5">5. Coastal View</a>
+          <a href="#stop-6">6. Zafer Burnu</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Traditional stone homes in Dipkarpaz village square" class="cover" loading="lazy" src="images/karpaz/dipkarpaz-village.jpg" />
+            <h3>Dipkarpaz Village</h3>
+            <p>Start in the village before entering the more remote part of the peninsula. It gives the route a human beginning and a place to buy water or snacks.</p>
+            <a href="https://maps.google.com/?q=35.5978,34.3775" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Dipkarpaz (Rizokarpaso in Greek) sits at the start of the Karpaz Peninsula and remains one of the few villages on the island with a historically mixed Greek and Turkish Cypriot community.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-1">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 15 mins drive (10.5 km) via coastal road</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Scenic drive looking down Karpaz sea highways" class="cover" loading="lazy" src="images/karpaz/karpaz-coastal-road.jpg" />
+            <h3>Karpaz Scenic Drive</h3>
+            <p>The drive itself is part of the experience. Open roads, quiet views and changing landscapes make this route feel different from the city-based pages.</p>
+            <a href="https://maps.google.com/?q=35.6180,34.4450" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The road out of the village narrows as it enters the peninsula proper, with open farmland gradually giving way to pine forest and increasingly wild, undeveloped coastline on both sides.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-2">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 12 mins drive (8 km) entering the National Park</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="Feral donkeys standing along roadside dunes" class="cover" loading="lazy" src="images/karpaz/karpaz-wild-donkeys.jpg" />
+            <h3>Wild Donkey Area</h3>
+            <p>A memorable stop for many visitors. The donkeys are strongly associated with the Karpaz experience, but visitors should observe respectfully and avoid careless feeding.</p>
+            <a href="https://maps.google.com/?q=35.6320,34.5150" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The peninsula's donkeys descend from farm animals abandoned decades ago as tractors replaced them for fieldwork. Now protected within the national park, they're famously unbothered by passing cars.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-3">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 10 mins drive (7.5 km) on unpaved roads</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="The front stone architectural gates of Apostolos Andreas Monastery" class="cover" loading="lazy" src="images/karpaz/apostolos-andreas-monastery.jpg" />
+            <h3>Apostolos Andreas Monastery</h3>
+            <p>The cultural and spiritual anchor of the route. It gives the long drive a meaningful destination and adds history to the nature-focused route.</p>
+            <a href="https://maps.google.com/?q=35.6644,34.5786" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Apostolos Andreas Monastery, dedicated to St. Andrew the Apostle, is one of the most significant pilgrimage sites in Cyprus for Orthodox Christians, historically drawing visitors from across the island each year.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-4">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 5 mins drive (3 km) back towards the coast</div>
+          <article class="stop-card" id="stop-5">
+            <img alt="Quiet coastal beach along the Karpaz peninsula" class="cover" loading="lazy" src="images/karpaz/karpaz-beach.jpg" />
+            <h3>Coastal View / Beach Stop</h3>
+            <p>Add a beach or coastal pause depending on time and road conditions. This keeps the route flexible and gives visitors a chance to rest before the final stretch.</p>
+            <a href="https://maps.google.com/?q=35.6450,34.5450" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The peninsula's beaches, including the well-known Golden Beach further along the coast, are important nesting grounds for loggerhead and green sea turtles during the summer months.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-5">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 15 mins drive to the absolute tip</div>
+          <article class="stop-card" id="stop-6">
+            <span class="badge-photo">📸 Best Photo Spot</span>
+            <img alt="Raw cliffs of Zafer Burnu edge point" class="cover" loading="lazy" src="images/karpaz/zafer-burnu-cover.jpg" />
+            <h3>Zafer Burnu Direction / Far-East Viewpoint</h3>
+            <p>End with the feeling of reaching the edge of the island. Even if visitors do not continue all the way, the far-east landscape gives the route its strongest memory.</p>
+            <a href="https://maps.google.com/?q=35.6706,34.5892" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Zafer Burnu (Cape Apostolos Andreas) marks the easternmost tip of Cyprus — from here there's nothing but open Mediterranean until the coast of Syria, roughly 100km away.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-6">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Practical info</h2>
+            <ul>
+              <li>Start early; this is the longest route in the set.</li>
+              <li>Fuel up before going deep into the peninsula.</li>
+              <li>Bring water, snacks, sun protection and a charged phone.</li>
+              <li>Drive slowly around animals and narrow rural roads.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>Insider tip</h2>
+            <p>Start your journey to the Karpaz Peninsula early in the morning. The roads are quieter, temperatures are cooler, and you'll have a better chance of enjoying Golden Beach before it becomes busier later in the day.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Listen to the Local Audio Guide:</p>
+              <audio aria-label="Audio narration of the insider tip above" controls="" preload="none">
+                <source src="audio/karpaz-donkey-tip.mp3" type="audio/mpeg" /> Your browser does not support the audio element.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Read the transcript</summary>
+                <p>Hey there, explorer. Here is your Karpaz insider secret: Do not waste your money buying feeding carrots early in Dipkarpaz village. Keep driving until you reach the actual national park entrance gates. The wild donkeys here will practically stick their heads into your open car windows if you have treats ready. Just remember—they actually prefer fresh apples over dry bread!</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-flag"><img alt="TRNC flag" src="images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span>
+      <span>route pages built for Northern Cyprus discovery</span>
+    </div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

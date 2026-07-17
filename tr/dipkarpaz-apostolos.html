@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Dipkarpaz, Yaban Eşekleri ve Apostolos Andreas | Drive KKTC</title>
+  <meta content="Dipkarpaz köyü, manzaralı yollar, yaban eşekleri, Apostolos Andreas Manastırı ve uzak doğu manzara noktalarından geçen bir Karpaz yolculuğu planlayın." name="description" />
+  <link href="https://example.github.io/drive-kktc/tr/dipkarpaz-apostolos.html" rel="canonical" />
+  <link href="../images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="../images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="website" property="og:type" />
+  <meta content="Dipkarpaz, Yaban Eşekleri ve Apostolos Andreas" property="og:title" />
+  <meta content="Dipkarpaz köyü, manzaralı yollar, yaban eşekleri, Apostolos Andreas Manastırı ve uzak doğu manzara noktalarından geçen bir Karpaz yolculuğu planlayın." property="og:description" />
+  <meta content="https://example.github.io/drive-kktc/tr/dipkarpaz-apostolos.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/karpaz/karpaz-peninsula-road.jpg" property="og:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="karpaz">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logosu" src="../images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menü</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Rotalar</a>
+    <a href="index.html#about">Hakkında</a>
+    <a href="practical-info.html">Pratik Bilgiler</a>
+
+    <div class="language-switch">
+        <a href="../dipkarpaz-apostolos.html">EN</a>
+        <span>|</span>
+        <a href="dipkarpaz-apostolos.html" class="active">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img: url('../images/karpaz/karpaz-peninsula-road.jpg')">
+      <div class="theme-scene"><span class="sun-glow"></span><span class="donkey">🐴</span></div>
+    <div class="hero-pattern">
+      <img
+        class="hero-svg"
+        src="../images/hero-svg/karpaz-bg.svg"
+        alt="">
+</div>
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html">rotalar</a> / Dipkarpaz Köyü, Yaban Eşekleri ve Apostolos Andreas Rotası
+        </nav>
+        <span class="genre-badge">🏖️ Doğa Rotası</span>
+        <span class="eyebrow">yolculuk · doğa · en uç doğu</span>
+        <h1>Dipkarpaz Köyü, Yaban Eşekleri ve Apostolos Andreas Rotası</h1>
+        <p>Köy hayatı, açık manzaralar, yaban eşekleri ve Apostolos Andreas etrafında inşa edilmiş, Kuzey Kıbrıs'ın en doğusuna tam günlük bir yolculuk.</p>
+        <div class="tag-row">
+          <span class="tag">doğa</span>
+          <span class="tag">yolculuk</span>
+          <span class="tag">eşekler</span>
+          <span class="tag">manastır</span>
+        </div>
+        <div class="overview">
+          <div class="overview-card"><span>rota mesafesi</span><strong>yaklaşık 45 km</strong></div>
+          <div class="overview-card"><span>süre</span><strong>Tam gün (6 durak)</strong></div>
+          <div class="overview-card"><span>en iyi zaman</span><strong>erken başlangıç</strong></div>
+          <div class="overview-card"><span>başlangıç / bitiş</span><strong>Dipkarpaz / Zafer Burnu</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">haritayı görüntüle</a>
+          <a class="btn btn-ghost" href="karpaz.pdf" target="_blank" download>Rota PDF'ini İndir</a>
+          <button class="btn btn-ghost" data-share="" data-text="Karpaz için bu canlı yolculuk zaman çizelgesine göz atın!" data-title="Karpaz Parkur Rehberi">rotayı paylaş</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Biliyor muydunuz?</h2>
+          <p>Karpaz Yarımadası'ndaki yaban eşekleri en katı anlamda tam yaban sayılmazlar — aslında onlarca yıl önce traktörler onların işini devraldığında terk edilen çiftlik eşeklerinin soyundan gelirler. Artık yarımadanın korunan bir sembolüdürler ve milli park boyunca serbestçe dolaşırlar.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Etkileşimli Rota Zaman Çizelgesi</h2>
+          <p>Canlı haritalama eklentimizi kullanarak uzak yarımada yollarındaki koordinatlarınızı takip edin.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#9c6b05';
+          window.ROUTE_STOPS = [{
+            "name": "Dipkarpaz Köyü",
+            "lat": 35.5978,
+            "lng": 34.3775,
+            "id": "stop-1"
+          }, {
+            "name": "Karpaz Manzaralı Sürüşü",
+            "lat": 35.6180,
+            "lng": 34.4450,
+            "id": "stop-2"
+          }, {
+            "name": "Yaban Eşeği Bölgesi",
+            "lat": 35.6320,
+            "lng": 34.5150,
+            "id": "stop-3"
+          }, {
+            "name": "Apostolos Andreas Manastırı",
+            "lat": 35.6644,
+            "lng": 34.5786,
+            "id": "stop-4"
+          }, {
+            "name": "Sahil Manzarası / Plaj Durağı",
+            "lat": 35.6450,
+            "lng": 34.5450,
+            "id": "stop-5"
+          }, {
+            "name": "Zafer Burnu Yönü / En Doğu Manzara Noktası",
+            "lat": 35.6706,
+            "lng": 34.5892,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.6300, 34.4700];
+          window.ROUTE_ZOOM = 11;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Rota Seyahat Planı</h2>
+          <p>Zaman çizelgesini sırayla takip edin, ancak zamana, hava durumuna ve çalışma saatlerine bağlı olarak rotayı esnek tutun.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Dipkarpaz Köyü</a>
+          <a href="#stop-2">2. Karpaz Sürüşü</a>
+          <a href="#stop-3">3. Yaban Eşeği Bölgesi</a>
+          <a href="#stop-4">4. Apostolos Andreas</a>
+          <a href="#stop-5">5. Sahil Manzarası</a>
+          <a href="#stop-6">6. Zafer Burnu</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Dipkarpaz köy meydanındaki geleneksel taş evler" class="cover" loading="lazy" src="../images/karpaz/dipkarpaz-village.jpg" />
+            <h3>Dipkarpaz Köyü</h3>
+            <p>Yarımadanın daha uzak kısmına girmeden önce köyde başlayın. Rotaya insani bir başlangıç ​​ve su veya atıştırmalık almak için bir yer sağlar.</p>
+            <a href="https://maps.google.com/?q=35.5978,34.3775" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Dipkarpaz, Karpaz Yarımadası'nın başlangıcında oturur ve adadaki tarihsel olarak karma bir Kıbrıslı Rum ve Kıbrıslı Türk topluluğuna sahip az sayıdaki köylerden biri olmaya devam etmektedir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-1">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 Sahil yolu üzerinden 15 dk sürüş (10.5 km)</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Karpaz deniz yollarına doğru bakan manzaralı sürüş" class="cover" loading="lazy" src="../images/karpaz/karpaz-coastal-road.jpg" />
+            <h3>Karpaz Manzaralı Sürüşü</h3>
+            <p>Sürüşün kendisi deneyimin bir parçasıdır. Açık yollar, sessiz manzaralar ve değişen coğrafya, bu rotanın şehir tabanlı sayfalardan farklı hissettirmesini sağlar.</p>
+            <a href="https://maps.google.com/?q=35.6180,34.4450" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Köyden çıkan yol yarımadanın kendisine girerken daralır; açık tarım arazileri yerini yavaş yavaş çam ormanlarına ve her iki tarafta giderek daha vahşi, el değmemiş sahil şeridine bırakır.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-2">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 Milli Parka girerken 12 dk sürüş (8 km)</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="Yol kenarındaki kum tepeleri boyunca duran yabani eşekler" class="cover" loading="lazy" src="../images/karpaz/karpaz-wild-donkeys.jpg" />
+            <h3>Yaban Eşeği Bölgesi</h3>
+            <p>Birçok ziyaretçi için unutulmaz bir durak. Eşekler, Karpaz deneyimiyle güçlü bir şekilde ilişkilidir, ancak ziyaretçiler saygıyla gözlem yapmalı ve dikkatsizce beslemekten kaçınmalıdır.</p>
+            <a href="https://maps.google.com/?q=35.6320,34.5150" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Yarımadanın eşekleri, on yıllar önce tarla işleri için traktörlerin yerini almasıyla terk edilen çiftlik hayvanlarından gelir. Artık milli park içinde korunan bu hayvanlar, yoldan geçen arabalara aldırış etmemeleriyle ünlüdür.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-3">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 Asfaltsız yollarda 10 dk sürüş (7.5 km)</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="Apostolos Andreas Manastırı'nın ön taş mimari kapıları" class="cover" loading="lazy" src="../images/karpaz/apostolos-andreas-monastery.jpg" />
+            <h3>Apostolos Andreas Manastırı</h3>
+            <p>Rotanın kültürel ve manevi çapası. Uzun sürüşe anlamlı bir varış noktası sağlar ve doğa odaklı rotaya tarih katar.</p>
+            <a href="https://maps.google.com/?q=35.6644,34.5786" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Havari Aziz Andreas'a adanmış olan Apostolos Andreas Manastırı, tarihsel olarak her yıl adanın dört bir yanından ziyaretçileri çeken, Ortodoks Hıristiyanlar için Kıbrıs'taki en önemli hac yerlerinden biridir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-4">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 Sahile doğru geriye 5 dk sürüş (3 km)</div>
+          <article class="stop-card" id="stop-5">
+            <img alt="Karpaz yarımadası boyunca sakin kıyı plajı" class="cover" loading="lazy" src="../images/karpaz/karpaz-beach.jpg" />
+            <h3>Sahil Manzarası / Plaj Durağı</h3>
+            <p>Zamana ve yol koşullarına bağlı olarak bir plaj veya sahil molası ekleyin. Bu, rotayı esnek tutar ve ziyaretçilere son bölümden önce dinlenme şansı verir.</p>
+            <a href="https://maps.google.com/?q=35.6450,34.5450" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Yarımadanın daha ilerisindeki ünlü Altın Kumsal'ı da içeren plajlar, yaz aylarında Caretta caretta ve yeşil deniz kaplumbağaları için önemli yuvalama alanlarıdır.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-5">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 En uç noktaya 15 dk sürüş</div>
+          <article class="stop-card" id="stop-6">
+            <span class="badge-photo">📸 En İyi Fotoğraf Noktası</span>
+            <img alt="Zafer Burnu'nun sarp kayalık uç noktası" class="cover" loading="lazy" src="../images/karpaz/zafer-burnu-cover.jpg" />
+            <h3>Zafer Burnu Yönü / En Doğu Manzara Noktası</h3>
+            <p>Adanın ucuna ulaşma hissiyle bitirin. Ziyaretçiler sonuna kadar devam etmese bile, en doğudaki manzara rotaya en güçlü hatırasını verir.</p>
+            <a href="https://maps.google.com/?q=35.6706,34.5892" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Zafer Burnu (Cape Apostolos Andreas) Kıbrıs'ın en doğu ucunu işaret eder — buradan Suriye kıyılarına kadar yaklaşık 100 km boyunca açık Akdeniz'den başka bir şey yoktur.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="dipkarpaz-apostolos.html::stop-6">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Pratik bilgiler</h2>
+            <ul>
+              <li>Erken başlayın; bu set içindeki en uzun rotadır.</li>
+              <li>Yarımadanın derinliklerine inmeden önce yakıt alın.</li>
+              <li>Yanınıza su, atıştırmalık, güneş koruması ve şarj edilmiş bir telefon alın.</li>
+              <li>Hayvanların çevresinde ve dar kırsal yollarda yavaş sürün.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>İçeriden ipucu</h2>
+            <p>Karpaz Yarımadası yolculuğunuza sabah erken saatlerde başlayın. Yollar daha sakin, hava daha serindir ve Altın Kumsal'ın günün ilerleyen saatlerinde kalabalıklaşmadan keyfini çıkarma şansınız daha yüksektir.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Yerel Sesli Rehberi Dinleyin:</p>
+              <audio aria-label="Yukarıdaki ipucunun sesli anlatımı" controls="" preload="none">
+                <source src="../audio/karpaz-donkey-tip-tr.mp3" type="audio/mpeg" /> Tarayıcınız ses öğesini desteklemiyor.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Dökümü okuyun</summary>
+                <p>Hey kaşif. İşte Karpaz için içeriden bir sırrın: Dipkarpaz köyünde beslemek için havuç alıp paranı boşa harcama. Asıl milli park giriş kapılarına ulaşana kadar sürmeye devam et. İkramların hazırsa buradaki yaban eşekleri kafalarını neredeyse arabanın açık pencerelerinden içeri sokacaktır. Sadece şunu unutma—aslında kuru ekmek yerine taze elmaları tercih ediyorlar!</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-flag"><img alt="KKTC bayrağı" src="../images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span>
+      <span>Kuzey Kıbrıs'ı keşfetmek için oluşturulmuş rota sayfaları</span>
+    </div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

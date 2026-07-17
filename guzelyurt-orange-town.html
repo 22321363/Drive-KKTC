@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Güzelyurt Archaeology &amp; Orange Town Route | Drive KKTC</title>
+  <meta content="Discover Güzelyurt through archaeology, St. Mamas, the Soli ruins, citrus landscapes and quieter west-side North Cyprus culture." name="description" />
+  <link href="https://example.github.io/drive-kktc/guzelyurt-orange-town.html" rel="canonical" />
+  <link href="images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://example.github.io/drive-kktc/guzelyurt-orange-town.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/guzelyurt/guzelyurt-orange-groves-cover.jpg" property="og:image" />
+  <meta content="Discover Güzelyurt through archaeology, St. Mamas, the Soli ruins, citrus landscapes and quieter west-side North Cyprus culture." property="og:description" />
+  <meta content="Güzelyurt Archaeology &amp; Orange Town Route" property="og:title" />
+  <meta content="website" property="og:type" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="guzelyurt">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logo" src="images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menu</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Routes</a>
+    <a href="index.html#about">About</a>
+    <a href="practical-info.html">Practical Info</a>
+
+    <div class="language-switch">
+        <a href="index.html" class="active">EN</a>
+        <span>|</span>
+        <a href="tr/guzelyurt-orange-town.html">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img:url('images/guzelyurt/guzelyurt-orange-groves-cover.jpg')">
+      <div class="theme-scene"><span class="falling">🍊</span><span class="falling">🍊</span><span class="falling">🍊</span><span class="falling">🍊</span><span class="falling">🍊</span></div>
+      <div class="hero-pattern">
+    <img
+        class="hero-svg"
+        src="images/hero-svg/guzelyurt-bg.svg"
+        alt="">
+</div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">routes</a> / Güzelyurt Archaeology, Nature &amp; Orange Town Route</div>
+        <span class="genre-badge">🍊 Culture Route</span>
+        <span class="eyebrow">museum · nature · local town</span>
+        <h1>Güzelyurt Archaeology, Nature &amp; Orange Town Route</h1>
+        <p>A quieter west-side route built around agricultural groves, regional town lifestyle markets, and museum histories.</p>
+        <div class="tag-row"><span class="tag">museum</span><span class="tag">nature</span><span class="tag">local</span><span class="tag">orange town</span></div>
+        <div class="overview">
+          <div class="overview-card"><span>route distance</span><strong>approx. 25 km</strong></div>
+          <div class="overview-card"><span>duration</span><strong>4–5 hours (6 stops)</strong></div>
+          <div class="overview-card"><span>best time</span><strong>morning</strong></div>
+          <div class="overview-card"><span>start / end</span><strong>Güzelyurt / West Coast</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">view map</a>
+          <a class="btn btn-ghost" href="Guzelyurt.pdf" target="_blank" download>Download Route PDF</a>
+          <button class="btn btn-ghost" data-share="" data-text="Discover orchards and museums on the scenic west side!" data-title="Güzelyurt Route">share route</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Did you know?</h2>
+          <p>Güzelyurt literally means "beautiful country" in Turkish. The town sits at the heart of Cyprus's citrus growing region and hosts an Orange Festival every June — and the Church of St. Mamas, right in town, is dedicated to the unlikely patron saint of tax evaders.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Interactive Route Timeline</h2>
+          <p>Use this embedded map to get a quick sense of the route before you set off, then follow the stops in order below.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#b8560c';
+          window.ROUTE_STOPS = [{
+            "name": "Güzelyurt Town Center",
+            "lat": 35.1990,
+            "lng": 32.9950,
+            "id": "stop-1"
+          }, {
+            "name": "Güzelyurt Archaeology Museum",
+            "lat": 35.1985,
+            "lng": 32.9945,
+            "id": "stop-2"
+          }, {
+            "name": "St. Mamas Church & Icon Museum",
+            "lat": 35.1988,
+            "lng": 32.9948,
+            "id": "stop-3"
+          }, {
+            "name": "Orange Groves / Agricultural Roads",
+            "lat": 35.2060,
+            "lng": 33.0010,
+            "id": "stop-4"
+          }, {
+            "name": "Soli Ancient City",
+            "lat": 35.1992,
+            "lng": 32.9958,
+            "id": "stop-5"
+          }, {
+            "name": "West-side Nature Stop",
+            "lat": 35.2110,
+            "lng": 32.9895,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.2010, 32.9960];
+          window.ROUTE_ZOOM = 13;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Stops</h2>
+          <p>Follow the timeline in order, but keep the route flexible depending on time, weather and opening hours.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Center</a><a href="#stop-2">2. Museum</a><a href="#stop-3">3. St. Mamas</a>
+          <a href="#stop-4">4. Groves</a><a href="#stop-5">5. Soli Ancient City</a><a href="#stop-6">6. West Nature</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Güzelyurt Town Center" class="cover" loading="lazy" src="images/guzelyurt/guzelyurt-town.jpg" />
+            <h3>Güzelyurt Town Center</h3>
+            <p>Begin in the town center to understand the pace of the area. It feels more local and less tourist-heavy.</p>
+            <a href="https://maps.google.com/?q=35.1990,32.9950" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Güzelyurt means "beautiful country" in Turkish. Long known as the agricultural heart of the island, the town hosts an annual Orange Festival every June celebrating the citrus that defines the region.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-1"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 3 mins walk (250m) to the museum</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Güzelyurt Archaeology Museum" class="cover" loading="lazy" src="images/guzelyurt/guzelyurt-archaeology-museum.jpg" />
+            <h3>Güzelyurt Archaeology &amp; Natural History Museum</h3>
+            <p>This is the route’s main cultural stop, providing detailed background on the ancient civilizations of the region.</p>
+            <a href="https://maps.google.com/?q=35.1985,32.9945" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Housed in a former bishop's residence next to St. Mamas Church, the museum's collection spans from the Neolithic period through the Byzantine era, including jewellery and ceramics found across the wider district.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-2"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 1 min walk next door</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="St. Mamas Church" class="cover" loading="lazy" src="images/guzelyurt/st-mamas-monastery.jpg" />
+            <h3>St. Mamas Church &amp; Icon Museum</h3>
+            <p>A historic, religious-cultural stop that pairs naturally with the museum right next door.</p>
+            <a href="https://maps.google.com/?q=35.1988,32.9948" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>St. Mamas is, unusually, the patron saint of tax evaders — according to local legend he once tamed a lion sent to fetch him for questioning over unpaid taxes, and rode it back into town himself. The church's carved sarcophagus is still a site of local pilgrimage.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-3"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚗 10 mins drive (5 km) into the agricultural belt</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="Orange Groves" class="cover portrait" loading="lazy" src="images/guzelyurt/guzelyurt-orange-trees.jpg" />
+            <h3>Orange Groves / Agricultural Roads</h3>
+            <p>Güzelyurt is deeply connected with citrus. A short scenic drive through these orchards establishes its signature identity.</p>
+            <a href="https://maps.google.com/?q=35.2060,33.0010" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The groves around Güzelyurt are irrigated by underground springs that also support grapefruit, apples and melons, which is part of why the region is sometimes called the fruit garden of Cyprus.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-4"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚗 15 mins drive (12 km) toward the coast</div>
+          <article class="stop-card" id="stop-5">
+            <span class="badge-photo">📸 Best Photo Spot</span>
+            <img alt="The ancient floor mosaics of Soli City ruins" class="cover" loading="lazy" src="images/guzelyurt/soli-ancient-city.jpg" />
+            <h3>Soli Ancient City Landmark</h3>
+            <p>Take a scenic historical detour to the ancient ruins of Soli. Witness the exceptionally preserved bird mosaics and majestic theater structures.</p>
+            <a href="https://maps.google.com/?q=35.1992,32.9958" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Discover one of Northern Cyprus's most significant archaeological sites, where Roman mosaics, an ancient basilica, and a remarkably preserved theatre reveal centuries of history.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save this stop" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-5">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 10 mins drive (8 km) along the shore</div>
+          <article class="stop-card" id="stop-6">
+            <img alt="West-side Nature Stop" class="cover" loading="lazy" src="images/guzelyurt/guzelyurt-nature.jpg" />
+            <h3>West-side Nature Stop</h3>
+            <p>End with a calm nature outlook. It rounds out the journey nicely and leaves plenty of space for landscape photography.</p>
+            <a href="https://maps.google.com/?q=35.2110,32.9895" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The countryside west of town, toward the ancient sites of Soli and Vouni, offers a quieter, less-visited side of Güzelyurt worth the extra detour if time allows.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-6"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Practical info</h2>
+            <ul>
+              <li>This route works best by car.</li>
+              <li>Museum and church hours should be checked before departure.</li>
+              <li>Bring water and plan stops because attractions are spread out.</li>
+              <li>Best for visitors who want a quieter, less crowded environment.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>Insider tip</h2>
+            <p>During citrus season, many roadside stalls sell freshly picked oranges, lemons, and homemade juices. It's one of the simplest ways to experience the region's agricultural heritage while supporting local growers.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Listen to the Citrus Valley Tip:</p>
+              <audio aria-label="Audio narration of the insider tip above" controls="" preload="none">
+                <source src="audio/guzelyurt-tip.mp3" type="audio/mpeg" /> Your browser does not support the audio element.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Read the transcript</summary>
+                <p>Welcome to the west side. To get the most out of Güzelyurt, stop treating it like a rushed, check-the-box tourist destination. The true magic of the orange town is its slow, slow rhythm. Give yourself extra time to get slightly lost on the dirt roads winding directly through the citrus orchards, and always stop for a traditional coffee in the central market.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span class="footer-flag"><img alt="TRNC flag" src="images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span><span>route pages built for Northern Cyprus discovery</span></div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

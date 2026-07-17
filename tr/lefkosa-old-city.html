@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Lefkoşa Suriçi Kültür ve Sokak Yürüyüşü | Drive KKTC</title>
+  <meta content="Kültür, kafeler ve yerel sokaklar için Girne Kapısı, Büyük Han, Selimiye, Bandabuliya ve Arasta duraklarıyla Lefkoşa suriçinde bir yürüyüş." name="description" />
+  <link href="https://example.github.io/drive-kktc/tr/lefkosa-old-city.html" rel="canonical" />
+  <link href="../images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="../images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://example.github.io/drive-kktc/tr/lefkosa-old-city.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/lefkosa/lefkosa-old-city-cover.jpg" property="og:image" />
+  <meta content="Kültür, kafeler ve yerel sokaklar için Girne Kapısı, Büyük Han, Selimiye, Bandabuliya ve Arasta duraklarıyla Lefkoşa suriçinde bir yürüyüş." property="og:description" />
+  <meta content="Lefkoşa Suriçi Kültür ve Sokak Yürüyüşü" property="og:title" />
+  <meta content="website" property="og:type" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="lefkosa">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logosu" src="../images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menü</button>
+     <div class="nav-links">
+
+    <a href="index.html#routes">Rotalar</a>
+    <a href="index.html#about">Hakkında</a>
+    <a href="practical-info.html">Pratik Bilgiler</a>
+
+    <div class="language-switch">
+        <a href="../lefkosa-old-city.html">EN</a>
+        <span>|</span>
+        <a href="lefkosa-old-city.html" class="active">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img:url('../images/lefkosa/lefkosa-old-city-cover.jpg')">
+      <div class="theme-scene"><span class="landmark">🕌</span><span class="landmark">🏛️</span><span class="landmark">🏰</span></div>
+      <div class="hero-pattern">
+      <img
+        class="hero-svg"
+        src="../images/hero-svg/lefkosa-bg.svg"
+        alt="">
+</div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">rotalar</a> / Lefkoşa Suriçi Kültür ve Sokak Yürüyüşü</div>
+        <span class="genre-badge">🏛️ Tarih Rotası</span>
+        <span class="eyebrow">yürüyüş rotası · kültür · kafeler</span>
+        <h1>Lefkoşa Suriçi Kültür ve Sokak Yürüyüşü</h1>
+        <p>Kapılar, tarihi kervansaraylar, çarşı sokakları ve hareketli şehir meydanları boyunca uzanan kompakt bir suriçi rotası.</p>
+        <div class="tag-row"><span class="tag">eski şehir</span><span class="tag">kültür</span><span class="tag">yemek</span><span class="tag">fotoğraf</span></div>
+        <div class="overview">
+          <div class="overview-card"><span>rota mesafesi</span><strong>yaklaşık 2.5 km</strong></div>
+          <div class="overview-card"><span>süre</span><strong>2–3 saat (6 durak)</strong></div>
+          <div class="overview-card"><span>en iyi zaman</span><strong>öğleden sonra geç saatler</strong></div>
+          <div class="overview-card"><span>başlangıç / bitiş</span><strong>Girne Kapısı / Arasta</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">haritayı görüntüle</a>
+          <a class="btn btn-ghost" href="lefkosa.pdf" target="_blank" download>Rota PDF'ini İndir</a>
+          <button class="btn btn-ghost" data-share="" data-text="Eski Lefkoşa içindeki tarihi taş kapıları ve derin çarşıları keşfedin!" data-title="Lefkoşa Surları Parkuru">rotayı paylaş</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Biliyor muydunuz?</h2>
+          <p>Büyük Han 1572'de — Osmanlıların Lefkoşa'yı Venediklilerden almasından sadece bir yıl sonra — inşa edildi ve Bursa'daki Koza Han model alındı. Selimiye Camii ise hayatına 13. yüzyılda Gotik St. Sophia Katedrali olarak başladı ve ancak 1571'deki Osmanlı fethinden sonra camiye dönüştürüldü.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Etkileşimli Rota Zaman Çizelgesi</h2>
+          <p>Yola çıkmadan önce rota hakkında hızlı bir fikir edinmek için bu gömülü haritayı kullanın, ardından aşağıdaki durakları sırayla takip edin.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#e30a17';
+          window.ROUTE_STOPS = [{
+            "name": "Girne Kapısı",
+            "lat": 35.1856,
+            "lng": 33.3623,
+            "id": "stop-1"
+          }, {
+            "name": "Sarayönü / Atatürk Meydanı",
+            "lat": 35.1817,
+            "lng": 33.3641,
+            "id": "stop-2"
+          }, {
+            "name": "Büyük Han",
+            "lat": 35.1790,
+            "lng": 33.3639,
+            "id": "stop-3"
+          }, {
+            "name": "Selimiye Camii Bölgesi",
+            "lat": 35.1801,
+            "lng": 33.3631,
+            "id": "stop-4"
+          }, {
+            "name": "Bandabuliya Pazarı",
+            "lat": 35.1799,
+            "lng": 33.3648,
+            "id": "stop-5"
+          }, {
+            "name": "Arasta Sokağı",
+            "lat": 35.1794,
+            "lng": 33.3636,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.1802, 33.3635];
+          window.ROUTE_ZOOM = 15;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Duraklar</h2>
+          <p>Zaman çizelgesini sırayla takip edin, ancak zamana, hava durumuna ve çalışma saatlerine bağlı olarak rotayı esnek tutun.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Girne Kapısı</a><a href="#stop-2">2. Sarayönü</a><a href="#stop-3">3. Büyük Han</a>
+          <a href="#stop-4">4. Selimiye</a><a href="#stop-5">5. Bandabuliya</a><a href="#stop-6">6. Arasta Sokağı</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1"><span class="reveal-icon">🏛️</span>
+            <img alt="Girne Kapısı" class="cover portrait" loading="lazy" src="../images/lefkosa/kyrenia-gate.jpg" />
+            <h3>Girne Kapısı</h3>
+            <p>Surlarla çevrili şehre ana giriş kapılarından biri olan bu temiz mimari tanıtım noktasından başlayın.</p>
+            <a href="https://maps.google.com/?q=35.1856,33.3623" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Girne Kapısı, Venedikliler tarafından 1562 yılında Lefkoşa'nın yıldız şeklindeki surlarının bir parçası olarak inşa edilmiştir ve başlangıçta Porta del Proveditore olarak adlandırılmıştır. Mağusa Kapısı ve Baf Kapısı ile birlikte suriçinde ayakta kalan üç kapıdan biridir ve yüzyıllar boyunca başkenti liman kenti Girne'ye bağlayan ana yol olmuştur.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="lefkosa-old-city.html::stop-1"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Girne Caddesi'nden aşağı 10 dk yürüyüş (700m)</div>
+          <article class="stop-card" id="stop-2"><span class="reveal-icon">🏛️</span>
+            <img alt="Sarayönü / Atatürk Meydanı" class="cover portrait" loading="lazy" src="../images/lefkosa/sarayonu-square.jpg" />
+            <h3>Sarayönü / Atatürk Meydanı</h3>
+            <p>Geleneksel binaların, belediye binalarının ve yerel kafelerin aynı hizada bulunduğu merkezi bir kentsel buluşma noktası.</p>
+            <a href="https://maps.google.com/?q=35.1817,33.3641" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Bu meydan, Lüzinyan ve daha sonra Osmanlı "Saray"ının bulunduğu yerdedir — bu nedenle "sarayın önü" anlamına gelen Sarayönü adı verilmiştir. Bugün büyük bir Atatürk anıtına ev sahipliği yapmakta ve Kuzey Lefkoşa'nın günlük yaşamının gayri resmi kalbi olarak işlev görmektedir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="lefkosa-old-city.html::stop-2"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Yaya bölgelerinden 4 dk yürüyüş (300m)</div>
+          <article class="stop-card" id="stop-3"><span class="reveal-icon">🏛️</span>
+            <span class="badge-photo">📸 En İyi Fotoğraf Noktası</span>
+            <img alt="Büyük Han" class="cover" loading="lazy" src="../images/lefkosa/buyuk-han-courtyard.jpg" />
+            <h3>Büyük Han</h3>
+            <p>Adadaki en güçlü kültürel noktalardan biri. Bu restore edilmiş Osmanlı hanı, avlusunda zanaatkar dükkanlarına ev sahipliği yapıyor.</p>
+            <a href="https://maps.google.com/?q=35.1790,33.3639" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Büyük Han, 1572 yılında adanın ilk Osmanlı valisi döneminde inşa edilmiş ve Bursa'daki Koza Han model alınmıştır. 1990'larda bugünkü galeri ve el sanatları dükkanlarına dönüştürülmeden önce, İngiliz egemenliği altında Lefkoşa'nın merkez hapishanesi olarak hizmet vermiştir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="lefkosa-old-city.html::stop-3"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Doğuya doğru kıvrılan yoldan 3 dk yürüyüş (200m)</div>
+          <article class="stop-card" id="stop-4"><span class="reveal-icon">🏛️</span>
+            <img alt="Selimiye Camii Bölgesi" class="cover" loading="lazy" src="../images/lefkosa/selimiye-mosque.jpg" />
+            <h3>Selimiye Camii Bölgesi</h3>
+            <p>Yerel tarihin çoklu çağları arasındaki geçişleri izleyen, belirgin mimari katmanlara sahip derin bir dönüm noktası.</p>
+            <a href="https://maps.google.com/?q=35.1801,33.3631" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Başlangıçta Gotik St. Sophia Katedrali olan bu yapı 13. yüzyılda kutsanmış olup Doğu Akdeniz'deki Lüzinyan dönemi Gotik mimarisinin en iyi korunmuş örneklerinden biri olmaya devam etmektedir. 1571 yılında camiye dönüştürüldükten sonra iki minare eklenmiştir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="lefkosa-old-city.html::stop-4"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Kapalı pazara doğru 2 dk yürüyüş (100m)</div>
+          <article class="stop-card" id="stop-5"><span class="reveal-icon">🏛️</span>
+            <img alt="Bandabuliya Pazarı" class="cover" loading="lazy" src="../images/lefkosa/bandabuliya-market.jpg" />
+            <h3>Bandabuliya Pazarı</h3>
+            <p>Ziyaretçilere Lefkoşa'nın klasik pazar alışverişlerine doğrudan erişim sağlayan kapalı bir ürün ve tekstil merkezi.</p>
+            <a href="https://maps.google.com/?q=35.1799,33.3648" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Bandabuliya, Osmanlı döneminden beri Lefkoşa'nın kapalı belediye pazarı olarak hizmet vermektedir ve halen birçok yerlinin turistik hediyelik eşyalardan ziyade ürün, peynir ve taze ekmek satın aldığı yerdir — ziyaretçiler için bir vitrin değil, gerçekten çalışan bir pazardır.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="lefkosa-old-city.html::stop-5"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Kontrol noktasına doğru geri 5 dk yürüyüş (400m)</div>
+          <article class="stop-card" id="stop-6"><span class="reveal-icon">🏛️</span>
+            <img alt="Arasta Sokağı" class="cover" loading="lazy" src="../images/lefkosa/arasta-street.jpg" />
+            <h3>Arasta Sokağı</h3>
+            <p>Hediyelik eşya dükkanları, kafeler ve günlük sokak hayatıyla dolu canlı bir yürüyüş ticari caddesi ile rotanızı sonlandırın.</p>
+            <a href="https://maps.google.com/?q=35.1794,33.3636" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Selimiye ve Büyük Han'ın hemen arkasında yer alan bu cadde, nesillerdir faaliyet gösteren küçük atölyeler, terziler ve kahvehanelerle kaplı olarak uzun zamandır eski şehrin ticari omurgası olarak hizmet vermektedir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="lefkosa-old-city.html::stop-6"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Pratik bilgiler</h2>
+            <ul>
+              <li>Rahat ayakkabılar yeterlidir; rota çoğunlukla yürünebilir durumdadır.</li>
+              <li>Yaz aylarında günün en sıcak saatlerinden kaçının.</li>
+              <li>Kafeler, atıştırmalıklar veya küçük dükkanlar için yanınızda bir miktar nakit bulundurun.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>İçeriden ipucu</h2>
+            <p>Büyük Han'ı öğleden sonra geç saatlerde, gün batımından yaklaşık bir saat önce ziyaret edin. Avlu daha sakinleşir, taş mimari sıcak ışıkla parlar ve fotoğraf çekmek veya geleneksel bir Türk kahvesinin tadını çıkarmak için en iyi atmosferi bulursunuz.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Suriçi İpucunu Dinleyin:</p>
+              <audio aria-label="Yukarıdaki ipucunun sesli anlatımı" controls="" preload="none">
+                <source src="../audio/lefkosa-tip-tr.mp3" type="audio/mpeg" /> Tarayıcınız ses öğesini desteklemiyor.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Dökümü okuyun</summary>
+                <p>Suriçinde mi yürüyorsunuz? Öğle sıcağından ne pahasına olursa olsun kaçının. Sokak yürüyüşünüzü öğleden sonra geç saatler için planlayın. Sadece eski ara sokaklarda yürümek için sıcaklık rahat olmakla kalmayacak, aynı zamanda Büyük Han avlusunun içindeki aydınlatma da olağanüstü derecede sıcak hale gelerek yerel sokak fotoğrafçılığı yapmak için kesinlikle en iyi zamanı sunacaktır.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span class="footer-flag"><img alt="KKTC bayrağı" src="../images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span><span>Kuzey Kıbrıs'ı keşfetmek için oluşturulmuş rota sayfaları</span></div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

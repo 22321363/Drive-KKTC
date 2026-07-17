@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Bellapais Abbey &amp; St. Hilarion Castle Route | Drive KKTC</title>
+  <meta content="Explore Bellapais Abbey, village viewpoints and St. Hilarion Castle on a scenic mountain drive above Kyrenia in Northern Cyprus." name="description" />
+  <link href="https://example.github.io/drive-kktc/bellapais-st-hilarion.html" rel="canonical" />
+  <link href="images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://example.github.io/drive-kktc/bellapais-st-hilarion.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/bellapais/bellapais-abbey-courtyard-cover.jpg" property="og:image" />
+  <meta content="Explore Bellapais Abbey, village viewpoints and St. Hilarion Castle on a scenic mountain drive above Kyrenia in Northern Cyprus." property="og:description" />
+  <meta content="Bellapais Abbey &amp; St. Hilarion Castle Route" property="og:title" />
+  <meta content="website" property="og:type" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="bellapais">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logo" src="images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menu</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Routes</a>
+    <a href="index.html#about">About</a>
+    <a href="practical-info.html">Practical Info</a>
+
+    <div class="language-switch">
+        <a href="index.html" class="active">EN</a>
+        <span>|</span>
+        <a href="tr/bellapais-st-hilarion.html">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img:url('images/bellapais/bellapais-abbey-courtyard-cover.jpg')">
+      <div class="theme-scene"><span class="mountain m1"></span><span class="mountain m2"></span><span class="mountain m3"></span><span class="falling">🍃</span><span class="falling">🍃</span><span class="falling">🍃</span><span class="falling">🍃</span></div>
+     <div class="hero-pattern">
+    <img
+        class="hero-svg"
+        src="images/hero-svg/bellapais-bg.svg"
+        alt="">
+</div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">routes</a> / Bellapais Abbey &amp; St. Hilarion Mountain Views Route</div>
+        <span class="genre-badge">⛰️ Mountain Route</span>
+        <span class="eyebrow">scenic drive · castles · viewpoints</span>
+        <h1>Bellapais Abbey &amp; St. Hilarion Mountain Views Route</h1>
+        <p>A mountain-facing route that mixes village atmosphere, abbey ruins, castle climbs and wide views over Kyrenia.</p>
+        <div class="tag-row"><span class="tag">views</span><span class="tag">history</span><span class="tag">mountains</span><span class="tag">photos</span></div>
+        <div class="overview">
+          <div class="overview-card"><span>route distance</span><strong>approx. 20 km</strong></div>
+          <div class="overview-card"><span>duration</span><strong>4–5 hours (6 stops)</strong></div>
+          <div class="overview-card"><span>best time</span><strong>morning or golden hour</strong></div>
+          <div class="overview-card"><span>start / end</span><strong>Bellapais / Kyrenia Mountains</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">view map</a>
+          <a class="btn btn-ghost" href="Bellapais.pdf" target="_blank" download>Download Route PDF</a>
+          <button class="btn btn-ghost" data-share="" data-text="Check out this gorgeous castle and mountain viewpoint trail!" data-title="Bellapais &amp; St. Hilarion Track">share route</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Did you know?</h2>
+          <p>St. Hilarion's turrets and crumbling towers are rumoured to have inspired Walt Disney's castle in Snow White and the Seven Dwarfs. Down in the village, Bellapais was made famous by British writer Lawrence Durrell, who lived there in the 1950s and wrote about it in his memoir Bitter Lemons of Cyprus.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Interactive Route Timeline</h2>
+          <p>Use this embedded map to get a quick sense of the route before you set off, then follow the stops in order below.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#5c7a3a';
+          window.ROUTE_STOPS = [{
+            "name": "Bellapais Village",
+            "lat": 35.3103,
+            "lng": 33.3572,
+            "id": "stop-1"
+          }, {
+            "name": "Bellapais Abbey",
+            "lat": 35.3110,
+            "lng": 33.3580,
+            "id": "stop-2"
+          }, {
+            "name": "Bellapais Viewpoint Cafés",
+            "lat": 35.3100,
+            "lng": 33.3565,
+            "id": "stop-3"
+          }, {
+            "name": "St. Hilarion Castle Lower Area",
+            "lat": 35.3222,
+            "lng": 33.2814,
+            "id": "stop-4"
+          }, {
+            "name": "St. Hilarion Upper Viewpoint",
+            "lat": 35.3230,
+            "lng": 33.2820,
+            "id": "stop-5"
+          }, {
+            "name": "Kyrenia Mountain Road Photo Stop",
+            "lat": 35.3050,
+            "lng": 33.3100,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.3160, 33.3200];
+          window.ROUTE_ZOOM = 12;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Stops</h2>
+          <p>Follow the timeline in order, but keep the route flexible depending on time, weather and opening hours.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Village</a><a href="#stop-2">2. Abbey</a><a href="#stop-3">3. Cafés</a>
+          <a href="#stop-4">4. Castle Lower</a><a href="#stop-5">5. Upper View</a><a href="#stop-6">6. Mountain Road</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Bellapais Village" class="cover" loading="lazy" src="images/bellapais/bellapais-village.jpg" />
+            <h3>Bellapais Village</h3>
+            <p>Begin in the village before rushing to the monument. The small streets, stone houses and calm pace help set the mood.</p>
+            <a href="https://maps.google.com/?q=35.3103,33.3572" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Bellapais takes its name from the Abbaye de la Paix ("Abbey of Peace"). The village's central landmark, the so-called Tree of Idleness, is where locals traditionally gathered to sit and do nothing — Lawrence Durrell wrote fondly about this custom in Bitter Lemons of Cyprus.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="bellapais-st-hilarion.html::stop-1"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 2 mins walk (200m) to the Abbey</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Bellapais Abbey" class="cover" loading="lazy" src="images/bellapais/bellapais-abbey-exterior.jpg" />
+            <h3>Bellapais Abbey</h3>
+            <p>The abbey sits on a natural terrace in the Five Finger Mountains, giving the stop both history and a strong view toward the coast.</p>
+            <a href="https://maps.google.com/?q=35.3110,33.3580" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>Bellapais Abbey was built in the 13th century by Augustinian canons under the Lusignan kings, making it one of the finest examples of Gothic architecture on the island. Its cloisters and refectory are still used for concerts and cultural events in summer.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="bellapais-st-hilarion.html::stop-2"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 2 mins walk (100m) to viewpoint</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="Bellapais Viewpoint Cafés" class="cover" loading="lazy" src="images/bellapais/bellapais-cafe-terrace.jpg" />
+            <h3>Bellapais Viewpoint Cafés</h3>
+            <p>Pause near the village viewpoint area for a drink or snack. This makes the route feel less rushed and offers great vistas.</p>
+            <a href="https://maps.google.com/?q=35.3100,33.3565" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>These terrace cafés sit right on the edge of the village, giving unobstructed views down toward Kyrenia and the coastline — a favourite stop for both Durrell's generation of expatriate writers and today's visitors.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="bellapais-st-hilarion.html::stop-3"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚗 25 mins drive (15 km) winding mountain road</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="St. Hilarion Castle Lower Area" class="cover portrait" loading="lazy" src="images/bellapais/st-hilarion-castle-exterior.jpg" />
+            <h3>St. Hilarion Castle Lower Area</h3>
+            <p>Arrive at the castle and begin with the lower sections. The ruins already feel dramatic right from the first levels.</p>
+            <a href="https://maps.google.com/?q=35.3222,33.2814" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>St. Hilarion's original structure was a Byzantine monastery built in the 10th century around the tomb of the hermit monk Hilarion. It was later expanded into a full military fortress by the Lusignans, one of three castles (with Buffavento and Kantara) that once formed a signal chain across the Kyrenia mountains.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="bellapais-st-hilarion.html::stop-4"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ 20 mins hike up steep stone steps</div>
+          <article class="stop-card" id="stop-5">
+            <span class="badge-photo">📸 Best Photo Spot</span>
+            <img alt="St. Hilarion Upper Viewpoint" class="cover" loading="lazy" src="images/bellapais/st-hilarion-viewpoint.jpg" />
+            <h3>St. Hilarion Upper Viewpoint</h3>
+            <p>The climb becomes the reward. From the higher points, the route turns into a sweeping panoramic view experience over Kyrenia.</p>
+            <a href="https://maps.google.com/?q=35.3230,33.2820" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The uppermost section, known as Prince John's Tower, sits at the castle's highest point. Local legend holds that its jagged silhouette inspired Walt Disney's castle in Snow White, though the connection has never been officially confirmed.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="bellapais-st-hilarion.html::stop-5"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚗 15 mins drive (10 km) back towards coast</div>
+          <article class="stop-card" id="stop-6">
+            <img alt="Kyrenia Mountain Road Photo Stop" class="cover" loading="lazy" src="images/bellapais/kyrenia-mountains-road.jpg" />
+            <h3>Kyrenia Mountain Road Photo Stop</h3>
+            <p>Finish with a safe roadside viewpoint on the way back. It gives the route a clean ending and another chance for landscape photos.</p>
+            <a href="https://maps.google.com/?q=35.3050,33.3100" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Open in Google Maps</a>
+            <div class="stop-more">
+              <p>The road between Bellapais and Kyrenia winds through the Beşparmak ("Five Finger") mountain range, named for its distinctive jagged peaks, which locals liken to the fingers of a hand reaching into the sky.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">More details</span> <span class="chevron">▾</span></button>
+            <button aria-label="Save stop" class="save-btn" data-save-id="bellapais-st-hilarion.html::stop-6"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Practical info</h2>
+            <ul>
+              <li>Wear shoes with grip because castle steps can be uneven.</li>
+              <li>Bring water, especially in summer.</li>
+              <li>Driving is recommended between Bellapais and St. Hilarion.</li>
+              <li>Check opening times before going, especially outside peak season.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>Insider tip</h2>
+            <p>Wear comfortable shoes for Bellapais Abbey. The uneven stone paths and staircases are part of the site's historic charm, and exploring the upper terraces rewards you with some of the best panoramic views in Northern Cyprus.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Listen to the Mountain Route Tip:</p>
+              <audio aria-label="Audio narration of the insider tip above" controls="" preload="none">
+                <source src="audio/bellapais-tip.mp3" type="audio/mpeg" /> Your browser does not support the audio element.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Read the transcript</summary>
+                <p>Planning your mountain drive? Here is the optimal sequence: Visit Bellapais village first thing in the morning. The narrow streets are beautifully quiet and completely relaxed early on. Save Saint Hilarion Castle for the later afternoon; the climbing is much cooler, and the mountain shadows make the coastal views spectacular as the light softens.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span class="footer-flag"><img alt="TRNC flag" src="images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span><span>route pages built for Northern Cyprus discovery</span></div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

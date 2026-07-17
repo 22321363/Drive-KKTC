@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Girne Limanı, Kalesi ve Gün Batımı Yürüyüşü | Drive KKTC</title>
+  <meta content="Liman, kale, batık gemi müzesi, eski sokaklar ve su kenarında yavaş bir gün batımı finali ile basit bir Girne rotasını takip edin." name="description" />
+  <link href="https://example.github.io/drive-kktc/tr/kyrenia-harbour-sunset.html" rel="canonical" />
+  <link href="../images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="../images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://example.github.io/drive-kktc/tr/kyrenia-harbour-sunset.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/kyrenia/kyrenia-harbour-sunset-cover.jpg" property="og:image" />
+  <meta content="Liman, kale, batık gemi müzesi, eski sokaklar ve su kenarında yavaş bir gün batımı finali ile basit bir Girne rotasını takip edin." property="og:description" />
+  <meta content="Girne Limanı, Kalesi ve Gün Batımı Yürüyüşü" property="og:title" />
+  <meta content="website" property="og:type" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="kyrenia">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logosu" src="../images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menü</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Rotalar</a>
+    <a href="index.html#about">Hakkında</a>
+    <a href="practical-info.html">Pratik Bilgiler</a>
+
+    <div class="language-switch">
+        <a href="../kyrenia-harbour-sunset.html">EN</a>
+        <span>|</span>
+        <a href="kyrenia-harbour-sunset.html" class="active">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img:url('../images/kyrenia/kyrenia-harbour-sunset-cover.jpg')">
+      <div class="theme-scene"><span class="wave-strip"></span><span class="wave-strip wave-2"></span><span class="boat">⛵</span></div>
+      <div class="hero-pattern">
+    <img src="../images/hero-svg/kyrenia-bg.svg" alt="">
+</div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">rotalar</a> / Girne Limanı, Kalesi ve Gün Batımı Yürüyüşü</div>
+        <span class="genre-badge">🌊 Deniz Rotası</span>
+        <span class="eyebrow">liman yürüyüşü · tarih · gün batımı</span>
+        <h1>Girne Limanı, Kalesi ve Gün Batımı Yürüyüşü</h1>
+        <p>Liman, kale surları, müzeler, deniz manzaraları ve yavaş bir gün batımı bitişi etrafında inşa edilmiş klasik bir Girne rotası.</p>
+        <div class="tag-row"><span class="tag">liman</span><span class="tag">kale</span><span class="tag">deniz</span><span class="tag">gün batımı</span></div>
+        <div class="overview">
+          <div class="overview-card"><span>rota mesafesi</span><strong>yaklaşık 3 km</strong></div>
+          <div class="overview-card"><span>süre</span><strong>3–4 saat (6 durak)</strong></div>
+          <div class="overview-card"><span>en iyi zaman</span><strong>öğleden sonra geç saatlerden gün batımına</strong></div>
+          <div class="overview-card"><span>başlangıç / bitiş</span><strong>Girne Limanı</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">haritayı görüntüle</a>
+          <a class="btn btn-ghost" href="kyrenia.pdf" target="_blank" download>Rota PDF'ini İndir</a>
+          <button class="btn btn-ghost" data-share="" data-text="Ortaçağ deniz limanı hatlarından gün batımı manzaralarına doğru yürüyün." data-title="Girne Liman Güvertesi">rotayı paylaş</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Biliyor muydunuz?</h2>
+          <p>Batık Gemi Müzesi'ndeki gemi, MÖ 300 civarında Akdeniz'de yelken açmış ve Girne açıklarında batmıştır — şimdiye kadar kurtarılan en eski Yunan ticaret gemisidir. Yerel bir dalgıç 1965 yılında onu tesadüfen bulmuş ve arkeologların gövdeyi çıkarıp parçalarını birleştirmesi yıllar almıştır.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Etkileşimli Rota Zaman Çizelgesi</h2>
+          <p>Yola çıkmadan önce rota hakkında hızlı bir fikir edinmek için bu gömülü haritayı kullanın, ardından aşağıdaki durakları sırayla takip edin.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#0f6fb3';
+          window.ROUTE_STOPS = [{
+            "name": "Girne Limanı",
+            "lat": 35.3417,
+            "lng": 33.3192,
+            "id": "stop-1"
+          }, {
+            "name": "Girne Kalesi",
+            "lat": 35.3410,
+            "lng": 33.3213,
+            "id": "stop-2"
+          }, {
+            "name": "Batık Gemi Müzesi",
+            "lat": 35.3412,
+            "lng": 33.3210,
+            "id": "stop-3"
+          }, {
+            "name": "Eski Şehir Sokakları",
+            "lat": 35.3400,
+            "lng": 33.3180,
+            "id": "stop-4"
+          }, {
+            "name": "Girne Kalesi Deniz Manzarası Noktaları",
+            "lat": 35.3396,
+            "lng": 33.3176,
+            "id": "stop-5"
+          }, {
+            "name": "Liman Gün Batımı Bitişi",
+            "lat": 35.3420,
+            "lng": 33.3195,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.3410, 33.3195];
+          window.ROUTE_ZOOM = 15;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Duraklar</h2>
+          <p>Zaman çizelgesini sırayla takip edin, ancak zamana, hava durumuna ve çalışma saatlerine bağlı olarak rotayı esnek tutun.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Liman</a><a href="#stop-2">2. Kale</a><a href="#stop-3">3. Batık Gemi</a>
+          <a href="#stop-4">4. Eski Şehir</a><a href="#stop-5">5. Deniz Manzaraları</a><a href="#stop-6">6. Gün Batımı</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Girne Limanı" class="cover" loading="lazy" src="../images/kyrenia/kyrenia-harbour-boats.jpg" />
+            <h3>Girne Limanı</h3>
+            <p>Girne'deki en bilindik manzara ile başlayın. Deniz melteminin, demirlenmiş teknelerin ve rahat sahil kafelerinin tadını çıkarın.</p>
+            <a href="https://maps.google.com/?q=35.3417,33.3192" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Girne'nin at nalı şeklindeki limanı Venedik dönemine kadar uzanır ve restoran ve kafelere dönüştürülmüş eski taş depolarla çevrili olarak şehirde en çok fotoğrafı çekilen nokta olmaya devam etmektedir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-1"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ İskele boyunca 5 dk yürüyüş (400m)</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Girne Kalesi" class="cover" loading="lazy" src="../images/kyrenia/kyrenia-castle-exterior.jpg" />
+            <h3>Girne Kalesi</h3>
+            <p>Limandan Girne'nin tarihi çekirdeğini oluşturan devasa taş kale surlarına doğru ilerleyin.</p>
+            <a href="https://maps.google.com/?q=35.3410,33.3213" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Bizanslılar ilk kaleyi 7. yüzyılda Arap akınlarına karşı koruma amacıyla buraya inşa ettiler. 1191'de Aslan Yürekli Richard tarafından ele geçirilmiş, Lüzinyanlar tarafından genişletilmiş ve 1489 civarında Venedik egemenliğinde şimdiki halini almıştır.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-2"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Kale surları içinde 2 dk yürüyüş</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="Batık Gemi Müzesi" class="cover" loading="lazy" src="../images/kyrenia/shipwreck-museum.jpg" />
+            <h3>Batık Gemi Müzesi</h3>
+            <p>Doğrudan kale alanının içinde yer alan bu müze, var olan en eski kurtarılmış ticaret gemisi batıklarından birini sergiliyor.</p>
+            <a href="https://maps.google.com/?q=35.3412,33.3210" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Sergilenen gemi MÖ 300 civarında batmıştır ve bugüne kadar kurtarılan en eski Yunan ticaret gemisidir — 1965 yılında yerel bir dalgıç tarafından bulunmuş ve yıllar süren bir kazıdan sonra parçaları titizlikle yeniden bir araya getirilmiştir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-3"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Dar arka sokaklara doğru 10 dk yürüyüş (800m)</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="Eski Şehir Sokakları" class="cover" loading="lazy" src="../images/kyrenia/kyrenia-old-town-street.jpg" />
+            <h3>Eski Şehir Sokakları</h3>
+            <p>Liman hattının hemen arkasındaki tarihi yerel karakterle dolu dar taş döşeli sokaklarda dolaşın.</p>
+            <a href="https://maps.google.com/?q=35.3400,33.3180" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Bu yollar liman sahilinin hemen arkasında yer alır ve Girne'nin turizm öncesi karakterinin çoğunu korur; birkaç adım ötedeki işlek sahilden çok daha sessiz olan dar taş ara sokaklardır.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-4"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Yokuş yukarı 5 dk yürüyüş (300m)</div>
+          <article class="stop-card" id="stop-5">
+            <span class="badge-photo">📸 En İyi Fotoğraf Noktası</span>
+            <img alt="Girne Kalesi surlarından Panoramik Akdeniz ufku görünümü" class="cover" loading="lazy" src="../images/kyrenia/girne-castle-sea-view.jpg" />
+            <h3>Girne Kalesi Deniz Manzarası Noktaları</h3>
+            <p>Çarpıcı okyanus manzaralarını yakalamak için geniş savunma duvarlarına tırmanın. Bu panoramik bakış açısı tarihi bir bağlam sağlar.</p>
+            <a href="https://maps.google.com/?q=35.3396,33.3176" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Kalenin deniz manzaralı terasları ziyaretçilere çarpıcı panoramik Girne Limanı manzaraları sunarak onları fotoğrafçılık ve gezi için en iyi yerlerden biri yapar.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-5">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Sahile doğru 10 dk yürüyüş</div>
+          <article class="stop-card" id="stop-6">
+            <img alt="Liman Gün Batımı Bitişi" class="cover" loading="lazy" src="../images/kyrenia/kyrenia-seafront-sunset-walk.jpg" />
+            <h3>Liman Gün Batımı Bitişi</h3>
+            <p>Gün batımı için limanın taş duvar kenarına geri dönün. Deniz kenarında yemek ve akşam fotoğrafları için ideal bir bitiş noktası sağlar.</p>
+            <a href="https://maps.google.com/?q=35.3420,33.3195" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Güneş batarken, liman taşları ve eski depo cepheleri sıcak altın rengi bir ışık alır — ister fotoğraf çekmek ister yavaş bir yürüyüş yapmak için olsun, yerliler buranın günün en iyi saati olduğunu düşünür.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="kyrenia-harbour-sunset.html::stop-6"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Pratik bilgiler</h2>
+            <ul>
+              <li>Merkez Girne'ye girdikten sonra bu rotayı yürüyerek geçmek kolaydır.</li>
+              <li>Otoparklar yoğun olabilir, bu nedenle gün batımından önce gelin.</li>
+              <li>Kapanış saati sorunlarından kaçınmak için kale/müze durağını daha erken yapın.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>İçeriden ipucu</h2>
+            <p>Kaleyi ziyaret ettikten sonra ekstra zamanınız kalırsa, ana liman kafelerinin ötesine daha küçük yan sokaklara doğru yürüyün. Buralar genellikle daha sessizdir ve en yoğun turistik bölgelerden uzakta yerel dükkanlar ve gizli manzara noktaları sunar.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Liman Gün Batımı İpucunu Dinleyin:</p>
+              <audio aria-label="Yukarıdaki ipucunun sesli anlatımı" controls="" preload="none">
+                <source src="../audio/kyrenia-tip-tr.mp3" type="audio/mpeg" /> Tarayıcınız ses öğesini desteklemiyor.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Dökümü okuyun</summary>
+                <p>Limana mı iniyorsunuz? Zamanlama her şeydir. Öğleden sonra çok geç gelmeyin, yoksa kale saatlerini tamamen kaçırırsınız. Açıkken doğrudan Girne Kalesi'ne gidin, surları keşfedin ve ardından zamanlamayı mükemmel bir şekilde ayarlayın, böylece altın saat başladığı an doğrudan liman taşlarına adım atabilirsiniz.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span class="footer-flag"><img alt="KKTC bayrağı" src="../images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span><span>Kuzey Kıbrıs'ı keşfetmek için oluşturulmuş rota sayfaları</span></div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

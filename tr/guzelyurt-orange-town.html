@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Güzelyurt Arkeolojisi ve Portakal Kasabası Rotası | Drive KKTC</title>
+  <meta content="Güzelyurt'u arkeoloji, St. Mamas, Soli kalıntıları, narenciye manzaraları ve sakin batı yakası Kuzey Kıbrıs kültürü ile keşfedin." name="description" />
+  <link href="https://example.github.io/drive-kktc/tr/guzelyurt-orange-town.html" rel="canonical" />
+  <link href="../images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="../images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://example.github.io/drive-kktc/tr/guzelyurt-orange-town.html" property="og:url" />
+  <meta content="https://example.github.io/drive-kktc/images/guzelyurt/guzelyurt-orange-groves-cover.jpg" property="og:image" />
+  <meta content="Güzelyurt'u arkeoloji, St. Mamas, Soli kalıntıları, narenciye manzaraları ve sakin batı yakası Kuzey Kıbrıs kültürü ile keşfedin." property="og:description" />
+  <meta content="Güzelyurt Arkeolojisi ve Portakal Kasabası Rotası" property="og:title" />
+  <meta content="website" property="og:type" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body data-theme="guzelyurt">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logosu" src="../images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menü</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Rotalar</a>
+    <a href="index.html#about">Hakkında</a>
+    <a href="practical-info.html">Pratik Bilgiler</a>
+
+    <div class="language-switch">
+        <a href="../guzelyurt-orange-town.html">EN</a>
+        <span>|</span>
+        <a href="guzelyurt-orange-town.html" class="active">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="route-hero" style="--hero-img:url('../images/guzelyurt/guzelyurt-orange-groves-cover.jpg')">
+      <div class="theme-scene"><span class="falling">🍊</span><span class="falling">🍊</span><span class="falling">🍊</span><span class="falling">🍊</span><span class="falling">🍊</span></div>
+     <div class="hero-pattern">
+      <img
+        class="hero-svg"
+        src="../images/hero-svg/guzelyurt-bg.svg"
+        alt="">
+</div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">rotalar</a> / Güzelyurt Arkeolojisi, Doğası ve Portakal Kasabası Rotası</div>
+        <span class="genre-badge">🍊 Kültür Rotası</span>
+        <span class="eyebrow">müze · doğa · yerel kasaba</span>
+        <h1>Güzelyurt Arkeolojisi, Doğası ve Portakal Kasabası Rotası</h1>
+        <p>Tarım bahçeleri, yöresel kasaba yaşamı pazarları ve müze tarihleri etrafında inşa edilmiş, sakin bir batı yakası rotası.</p>
+        <div class="tag-row"><span class="tag">müze</span><span class="tag">doğa</span><span class="tag">yerel</span><span class="tag">portakal kasabası</span></div>
+        <div class="overview">
+          <div class="overview-card"><span>rota mesafesi</span><strong>yaklaşık 25 km</strong></div>
+          <div class="overview-card"><span>süre</span><strong>4–5 saat (6 durak)</strong></div>
+          <div class="overview-card"><span>en iyi zaman</span><strong>sabah</strong></div>
+          <div class="overview-card"><span>başlangıç / bitiş</span><strong>Güzelyurt / Batı Kıyısı</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#map">haritayı görüntüle</a>
+          <a class="btn btn-ghost" href="guzelyurt.pdf" target="_blank" download>Rota PDF'ini İndir</a>
+          <button class="btn btn-ghost" data-share="" data-text="Manzaralı batı yakasında meyve bahçelerini ve müzeleri keşfedin!" data-title="Güzelyurt Rotası">rotayı paylaş</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="panel fact">
+          <h2>💡 Biliyor muydunuz?</h2>
+          <p>Güzelyurt, adından da anlaşılacağı gibi, Kıbrıs'ın narenciye yetiştiriciliği bölgesinin kalbinde yer alır ve her Haziran bir Portakal Festivali'ne ev sahipliği yapar — ayrıca kasabanın tam ortasındaki St. Mamas Kilisesi, pek de alışılmadık bir şekilde, vergi kaçıranların koruyucu azizine adanmıştır.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-title">
+          <h2>Etkileşimli Rota Zaman Çizelgesi</h2>
+          <p>Yola çıkmadan önce rota hakkında hızlı bir fikir edinmek için bu gömülü haritayı kullanın, ardından aşağıdaki durakları sırayla takip edin.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="route-map"></div>
+        </div>
+        <script>
+          window.ROUTE_ACCENT = '#b8560c';
+          window.ROUTE_STOPS = [{
+            "name": "Güzelyurt Şehir Merkezi",
+            "lat": 35.1990,
+            "lng": 32.9950,
+            "id": "stop-1"
+          }, {
+            "name": "Güzelyurt Arkeoloji Müzesi",
+            "lat": 35.1985,
+            "lng": 32.9945,
+            "id": "stop-2"
+          }, {
+            "name": "St. Mamas Kilisesi ve İkon Müzesi",
+            "lat": 35.1988,
+            "lng": 32.9948,
+            "id": "stop-3"
+          }, {
+            "name": "Portakal Bahçeleri / Tarım Yolları",
+            "lat": 35.2060,
+            "lng": 33.0010,
+            "id": "stop-4"
+          }, {
+            "name": "Soli Antik Kenti",
+            "lat": 35.1992,
+            "lng": 32.9958,
+            "id": "stop-5"
+          }, {
+            "name": "Batı Yakası Doğa Durağı",
+            "lat": 35.2110,
+            "lng": 32.9895,
+            "id": "stop-6"
+          }];
+          window.ROUTE_CENTER = [35.2010, 32.9960];
+          window.ROUTE_ZOOM = 13;
+        </script>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Duraklar</h2>
+          <p>Zaman çizelgesini sırayla takip edin, ancak zamana, hava durumuna ve çalışma saatlerine bağlı olarak rotayı esnek tutun.</p>
+        </div>
+        <div class="jump-nav">
+          <a href="#stop-1">1. Merkez</a><a href="#stop-2">2. Müze</a><a href="#stop-3">3. St. Mamas</a>
+          <a href="#stop-4">4. Bahçeler</a><a href="#stop-5">5. Soli Antik Kenti</a><a href="#stop-6">6. Batı Doğası</a>
+        </div>
+        <div class="stops timeline">
+          <article class="stop-card" id="stop-1">
+            <img alt="Güzelyurt Şehir Merkezi" class="cover" loading="lazy" src="../images/guzelyurt/guzelyurt-town.jpg" />
+            <h3>Güzelyurt Şehir Merkezi</h3>
+            <p>Bölgenin ritmini anlamak için şehir merkezinde başlayın. Turistik yoğunluktan ziyade daha çok yerel hissettirir.</p>
+            <a href="https://maps.google.com/?q=35.1990,32.9950" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Uzun süredir adanın tarımsal kalbi olarak bilinen kasaba, bölgeyi tanımlayan narenciyeyi kutlayan, her yıl Haziran ayında düzenlenen bir Portakal Festivali'ne ev sahipliği yapıyor.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-1"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Müzeye doğru 3 dk yürüyüş (250m)</div>
+          <article class="stop-card" id="stop-2">
+            <img alt="Güzelyurt Arkeoloji Müzesi" class="cover" loading="lazy" src="../images/guzelyurt/guzelyurt-archaeology-museum.jpg" />
+            <h3>Güzelyurt Arkeoloji ve Doğa Tarihi Müzesi</h3>
+            <p>Bölgenin antik uygarlıkları hakkında ayrıntılı arka plan bilgisi sağlayan rotanın ana kültürel durağı.</p>
+            <a href="https://maps.google.com/?q=35.1985,32.9945" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>St. Mamas Kilisesi'nin yanında eski bir piskoposluk konutunda yer alan müzenin koleksiyonu, geniş bir bölgede bulunan mücevherler ve seramikler de dahil olmak üzere Neolitik dönemden Bizans dönemine kadar uzanmaktadır.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-2"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚶‍♂️ Hemen yandaki binaya 1 dk yürüyüş</div>
+          <article class="stop-card" id="stop-3">
+            <img alt="St. Mamas Kilisesi" class="cover" loading="lazy" src="../images/guzelyurt/st-mamas-monastery.jpg" />
+            <h3>St. Mamas Kilisesi ve İkon Müzesi</h3>
+            <p>Hemen yanındaki müzeyle doğal olarak bütünleşen tarihi, dini-kültürel bir durak.</p>
+            <a href="https://maps.google.com/?q=35.1988,32.9948" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>St. Mamas sıra dışı bir şekilde vergi kaçıranların koruyucu azizidir — yerel efsaneye göre, bir zamanlar ödenmemiş vergiler nedeniyle sorguya çekilmek üzere gönderilen bir aslanı evcilleştirmiş ve aslanın sırtında kasabaya girmiştir. Kilisenin oymalı lahit mezarı halen yerel bir hac yeridir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-3"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚗 Tarım kuşağına doğru 10 dk sürüş (5 km)</div>
+          <article class="stop-card" id="stop-4">
+            <img alt="Portakal Bahçeleri" class="cover portrait" loading="lazy" src="../images/guzelyurt/guzelyurt-orange-trees.jpg" />
+            <h3>Portakal Bahçeleri / Tarım Yolları</h3>
+            <p>Güzelyurt narenciyeye derinden bağlıdır. Bu meyve bahçeleri arasında kısa bir manzaralı sürüş, onun imza kimliğini oluşturur.</p>
+            <a href="https://maps.google.com/?q=35.2060,33.0010" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Güzelyurt çevresindeki bahçeler, greyfurt, elma ve kavun yetiştiriciliğini de destekleyen yeraltı kaynakları tarafından sulanır, bu da bölgenin bazen Kıbrıs'ın meyve bahçesi olarak adlandırılmasının nedenlerinden biridir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-4"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <div class="drive-note">🚗 Sahile doğru 15 dk sürüş (12 km)</div>
+          <article class="stop-card" id="stop-5">
+            <span class="badge-photo">📸 En İyi Fotoğraf Noktası</span>
+            <img alt="Soli Antik Kenti'nin antik zemin mozaikleri" class="cover" loading="lazy" src="../images/guzelyurt/soli-ancient-city.jpg" />
+            <h3>Soli Antik Kenti Yapısı</h3>
+            <p>Soli'nin antik kalıntılarına manzaralı tarihi bir sapma yapın. İstisnai bir şekilde korunmuş kuş mozaiklerine ve görkemli tiyatro yapılarına tanık olun.</p>
+            <a href="https://maps.google.com/?q=35.1992,32.9958" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Roma mozaiklerinin, antik bir bazilikanın ve oldukça iyi korunmuş bir tiyatronun yüzyıllar öncesinin tarihini gözler önüne serdiği Kuzey Kıbrıs'ın en önemli arkeolojik alanlarından birini keşfedin.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Bu durağı kaydet" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-5">
+              <svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </button>
+          </article>
+          <div class="drive-note">🚗 Kıyı boyunca 10 dk sürüş (8 km)</div>
+          <article class="stop-card" id="stop-6">
+            <img alt="Batı Yakası Doğa Durağı" class="cover" loading="lazy" src="../images/guzelyurt/guzelyurt-nature.jpg" />
+            <h3>Batı Yakası Doğa Durağı</h3>
+            <p>Sakin bir doğa manzarasıyla bitirin. Yolculuğu güzelce tamamlar ve manzara fotoğrafçılığı için bolca alan bırakır.</p>
+            <a href="https://maps.google.com/?q=35.2110,32.9895" target="_blank" rel="noopener noreferrer" class="btn-map">📍 Google Haritalar'da Aç</a>
+            <div class="stop-more">
+              <p>Kasabanın batısındaki, Soli ve Vouni antik bölgelerine doğru uzanan kırsal alan, Güzelyurt'un daha sakin, daha az ziyaret edilen bir yönünü sunar ve zaman kalırsa ekstra sapmaya değerdir.</p>
+            </div>
+            <button class="more-btn" aria-expanded="false"><span class="label">Daha fazla detay</span> <span class="chevron">▾</span></button>
+            <button aria-label="Durağı kaydet" class="save-btn" data-save-id="guzelyurt-orange-town.html::stop-6"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Pratik bilgiler</h2>
+            <ul>
+              <li>Bu rota araçla en iyi sonucu verir.</li>
+              <li>Hareket etmeden önce müze ve kilise saatleri kontrol edilmelidir.</li>
+              <li>Gezilecek yerler birbirinden uzak olduğu için yanınıza su alın ve durakları planlayın.</li>
+              <li>Daha sakin, daha az kalabalık bir ortam isteyen ziyaretçiler için en iyisidir.</li>
+            </ul>
+          </div>
+          <div class="panel tip">
+            <h2>İçeriden ipucu</h2>
+            <p>Narenciye mevsimi boyunca birçok yol kenarı tezgahında taze toplanmış portakal, limon ve ev yapımı meyve suları satılmaktadır. Bu, yerel yetiştiricileri desteklerken bölgenin tarımsal mirasını deneyimlemenin en basit yollarından biridir.</p>
+            <div class="audio-guide-container">
+              <p class="audio-guide-label">🎧 Narenciye Vadisi İpucunu Dinleyin:</p>
+              <audio aria-label="Yukarıdaki ipucunun sesli anlatımı" controls="" preload="none">
+                <source src="../audio/guzelyurt-tip-tr.mp3" type="audio/mpeg" /> Tarayıcınız ses öğesini desteklemiyor.
+              </audio>
+              <details class="audio-guide-transcript">
+                <summary>Dökümü okuyun</summary>
+                <p>Batı yakasına hoş geldiniz. Güzelyurt'tan en iyi şekilde yararlanmak için ona telaşlı, kutucuk işaretlenen bir turizm noktası gibi davranmayı bırakın. Portakal kasabasının asıl büyüsü onun yavaş, ağır ritmidir. Narenciye bahçelerinin tam içinden geçen toprak yollarda biraz kaybolmak için kendinize ekstra zaman verin ve merkez pazarda her zaman geleneksel bir kahve için durun.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span class="footer-flag"><img alt="KKTC bayrağı" src="../images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span><span>Kuzey Kıbrıs'ı keşfetmek için oluşturulmuş rota sayfaları</span></div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

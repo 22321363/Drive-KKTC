@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Drive KKTC | Five Route Guides for Northern Cyprus</title>
+  <meta content="Discover Northern Cyprus through five carefully mapped routes, each with stops, practical info, a map and one local insider tip." name="description" />
+  <link href="https://example.github.io/drive-kktc/" rel="canonical" />
+  <link href="images/logo/favicon.png" rel="icon" type="image/png" />
+  <link href="images/logo/favicon-180.png" rel="apple-touch-icon" />
+  <meta content="website" property="og:type" />
+  <meta content="Drive KKTC | Five Route Guides for Northern Cyprus" property="og:title" />
+  <meta content="Discover Northern Cyprus through five carefully mapped routes, each with stops, practical info, a map and one local insider tip." property="og:description" />
+  <meta content="https://example.github.io/drive-kktc/images/kyrenia/kyrenia-harbour-sunset-cover.jpg" property="og:image" />
+  <meta content="https://example.github.io/drive-kktc/" property="og:url" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Drive KKTC",
+      "description": "Discover Northern Cyprus through five carefully mapped routes, each with stops, practical info, a map and one local insider tip.",
+      "url": "https://example.github.io/drive-kktc/",
+      "touristType": ["Culture", "Nature", "Road trip"]
+    }
+  </script>
+</head>
+
+<body data-theme="home">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><img alt="Drive KKTC logo" src="images/logo/drive-kktc-logo.png" /></a>
+      <button class="menu-btn">menu</button>
+      <div class="nav-links">
+
+    <a href="index.html#routes">Routes</a>
+    <a href="index.html#about">About</a>
+    <a href="practical-info.html">Practical Info</a>
+
+    <div class="language-switch">
+        <a href="index.html" class="active">EN</a>
+        <span>|</span>
+        <a href="tr/index.html">TR</a>
+    </div>
+
+</div>
+    </div>
+  </nav>
+  <main>
+    <section class="hero" style="--hero-img:url('images/kyrenia/kyrenia-harbour-sunset-cover.jpg')">
+      <div class="hero-pattern">
+        <img class="hero-svg" src="images/hero-svg/home-bg.svg" alt="" />
+      </div>
+
+      <div class="container">
+        <span class="eyebrow">mapping the island in one week</span>
+        <h1>Five precise routes for exploring Northern Cyprus.</h1>
+        <p>Drive KKTC delivers highly tailored, localized road trips featuring clear stopping points, interactive tracking maps, and hidden gems known only by locals.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#routes">Explore Itineraries</a>
+          <button class="btn btn-ghost" data-share="" data-title="Drive KKTC Platform">Share Platform</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>5</strong><span>Curated Tracks</span></div>
+          <div class="stat"><strong>25+</strong><span>Total Stops</span></div>
+          <div class="stat"><strong>100%</strong><span>Local Knowledge</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#routes" aria-label="Scroll to routes"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></a>
+    </section>
+    <section class="trust-strip">
+      <div class="container">
+        <div class="trust-strip-inner">
+          <div class="trust-item"><span class="icon">🚗</span><div><strong>Drive on the left</strong><span>steering wheel on the right</span></div></div>
+          <div class="trust-item"><span class="icon">₺</span><div><strong>Turkish Lira (TRY)</strong><span>cards work in most towns</span></div></div>
+          <div class="trust-item"><span class="icon">🛣️</span><div><strong>No toll roads</strong><span>anywhere in TRNC</span></div></div>
+          <div class="trust-item"><span class="icon">🗺️</span><div><strong>Self-guided</strong><span>no tour bus needed</span></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-title">
+          <h2>All Five Routes at a Glance</h2>
+          <p>Every route in one place — pick a line on the map or a card below.</p>
+        </div>
+        <div class="map-wrap">
+          <div id="overview-map"></div>
+        </div>
+        <script>
+          window.OVERVIEW_CENTER = [35.38, 33.75];
+          window.OVERVIEW_ZOOM = 9;
+          window.OVERVIEW_CTA_LABEL = 'View route →';
+          window.OVERVIEW_ROUTES = [{
+            "name": "Lefkoşa Old City Culture & Street Walk",
+            "url": "lefkosa-old-city.html",
+            "accent": "#e30a17",
+            "stops": [{"lat":35.1856,"lng":33.3623},{"lat":35.1817,"lng":33.3641},{"lat":35.1790,"lng":33.3639},{"lat":35.1801,"lng":33.3631},{"lat":35.1799,"lng":33.3648},{"lat":35.1794,"lng":33.3636}]
+          }, {
+            "name": "Bellapais Abbey & St. Hilarion Mountain Views Route",
+            "url": "bellapais-st-hilarion.html",
+            "accent": "#5c7a3a",
+            "stops": [{"lat":35.3103,"lng":33.3572},{"lat":35.3110,"lng":33.3580},{"lat":35.3100,"lng":33.3565},{"lat":35.3222,"lng":33.2814},{"lat":35.3230,"lng":33.2820},{"lat":35.3050,"lng":33.3100}]
+          }, {
+            "name": "Kyrenia Harbour, Castle & Sunset Walk",
+            "url": "kyrenia-harbour-sunset.html",
+            "accent": "#0f6fb3",
+            "stops": [{"lat":35.3417,"lng":33.3192},{"lat":35.3410,"lng":33.3213},{"lat":35.3412,"lng":33.3210},{"lat":35.3400,"lng":33.3180},{"lat":35.3396,"lng":33.3176},{"lat":35.3420,"lng":33.3195}]
+          }, {
+            "name": "Güzelyurt Archaeology & Orange Town Route",
+            "url": "guzelyurt-orange-town.html",
+            "accent": "#b8560c",
+            "stops": [{"lat":35.1990,"lng":32.9950},{"lat":35.1985,"lng":32.9945},{"lat":35.1988,"lng":32.9948},{"lat":35.2060,"lng":33.0010},{"lat":35.1992,"lng":32.9958},{"lat":35.2110,"lng":32.9895}]
+          }, {
+            "name": "Dipkarpaz Village, Wild Donkeys & Monastery",
+            "url": "dipkarpaz-apostolos.html",
+            "accent": "#9c6b05",
+            "stops": [{"lat":35.5978,"lng":34.3775},{"lat":35.6180,"lng":34.4450},{"lat":35.6320,"lng":34.5150},{"lat":35.6644,"lng":34.5786},{"lat":35.6450,"lng":34.5450},{"lat":35.6706,"lng":34.5892}]
+          }];
+        </script>
+      </div>
+    </section>
+    <section class="section" id="routes">
+      <div class="container">
+        <div class="section-title">
+          <h2>Select Your Next Route</h2>
+          <p>Click on any route below to unlock responsive layout cards, custom local insider tips, and pre-mapped coordinates.</p>
+        </div>
+        <p class="hint">❤️ Tap the heart on any card to save it for later — stored on this device only.</p>
+        <div class="routes-grid">
+          
+          <article class="route-card">
+            <img alt="Karpaz peninsula road" class="cover" loading="lazy" src="images/karpaz/karpaz-peninsula-road.jpg" />
+            <div class="card-body">
+              <div class="tag-row"><span class="tag">nature</span><span class="tag">road trip</span><span class="tag">wildlife</span></div>
+              <h3>Dipkarpaz Village, Wild Donkeys &amp; Monastery</h3>
+              <p>Drive deep into the undisturbed eastern wilderness of Cyprus. Encounter wild donkeys, empty shorelines, and the historic Apostolos Andreas compound.</p>
+            </div>
+            <a class="open" href="dipkarpaz-apostolos.html">Open Route →</a>
+            <button aria-label="Save" class="save-btn" data-save-id="route::dipkarpaz-apostolos.html"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          
+          <article class="route-card">
+            <img alt="Bellapais Abbey courtyard" class="cover" loading="lazy" src="images/bellapais/bellapais-abbey-courtyard-cover.jpg" />
+            <div class="card-body">
+              <div class="tag-row"><span class="tag">mountains</span><span class="tag">castles</span><span class="tag">history</span></div>
+              <h3>Bellapais Abbey &amp; St. Hilarion Mountain Views Route</h3>
+              <p>Scale the towering Kyrenia mountain heights to reveal mountaintop Crusader fortresses and the serene Gothic architecture of Bellapais Abbey.</p>
+            </div>
+            <a class="open" href="bellapais-st-hilarion.html">Open Route →</a>
+            <button aria-label="Save" class="save-btn" data-save-id="route::bellapais-st-hilarion.html"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          <!-- Route Card 3 -->
+          <article class="route-card">
+            <img alt="Kyrenia Harbour sunset" class="cover" loading="lazy" src="images/kyrenia/kyrenia-harbour-sunset-cover.jpg" />
+            <div class="card-body">
+              <div class="tag-row"><span class="tag">coastline</span><span class="tag">harbour</span><span class="tag">museums</span></div>
+              <h3>Kyrenia Harbour, Castle &amp; Sunset Walk</h3>
+              <p>A classic coastal route traversing ancient defensive fortress battlements, old harbor alleys, and finishing with panoramic sunset view decks over maritime piers.</p>
+            </div>
+            <a class="open" href="kyrenia-harbour-sunset.html">Open Route →</a>
+            <button aria-label="Save" class="save-btn" data-save-id="route::kyrenia-harbour-sunset.html"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          
+          <article class="route-card">
+            <img alt="Güzelyurt citrus orchards" class="cover" loading="lazy" src="images/guzelyurt/guzelyurt-orange-groves-cover.jpg" />
+            <div class="card-body">
+              <div class="tag-row"><span class="tag">citrus</span><span class="tag">archaeology</span><span class="tag">local</span></div>
+              <h3>Güzelyurt Archaeology &amp; Orange Town Route</h3>
+              <p>Escape into the tranquil agricultural valleys of the west side. Witness citrus orchards, unique church shrines, and deep museum relics.</p>
+            </div>
+            <a class="open" href="guzelyurt-orange-town.html">Open Route →</a>
+            <button aria-label="Save" class="save-btn" data-save-id="route::guzelyurt-orange-town.html"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+          
+          <article class="route-card">
+            <span class="badge-photo">★ Start here</span>
+            <img alt="Lefkoşa Old City" class="cover" loading="lazy" src="images/lefkosa/lefkosa-old-city-cover.jpg" />
+            <div class="card-body">
+              <div class="tag-row"><span class="tag">culture</span><span class="tag">walled city</span><span class="tag">bazaars</span></div>
+              <h3>Lefkoşa Old City Culture &amp; Street Walk</h3>
+              <p>Traverse the historical architectural layers inside capital stone bastions. Explore historic markets, caravanserais, and artisan quarters.</p>
+            </div>
+            <a class="open" href="lefkosa-old-city.html">Open Route →</a>
+            <button aria-label="Save" class="save-btn" data-save-id="route::lefkosa-old-city.html"><svg viewbox="0 0 24 24">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About the project</h2>
+          <p>Why this exists, and how it's built.</p>
+        </div>
+        <div class="info-grid">
+          <div class="panel">
+            <h2>The idea</h2>
+            <p>Drive KKTC was built as an intern project for the 2026 program, inspired by Drive Japan: a dedicated page for every experience, instead of scattered blog posts and outdated forum threads. Nothing like this existed for Northern Cyprus, so we built it — five self-researched routes, each shipped as a real page with a real URL.</p>
+          </div>
+          <div class="panel">
+            <h2>How it's built</h2>
+            <p>Plain HTML, CSS and JavaScript — no framework. Each route page includes an interactive Leaflet map, stop-by-stop cards with photos, practical info, an insider tip (with audio), and a save-for-later system that works entirely in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-flag"><img alt="TRNC flag" src="images/logo/trnc-flag.svg" /><span>Drive KKTC</span></span>
+      <span>© 2026 Drive KKTC Platform - Intern Development Project</span>
+    </div>
+  </footer>
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

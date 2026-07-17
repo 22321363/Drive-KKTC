@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+    <g fill="none" stroke="#0D6EFD" stroke-width="5" opacity="0.16">
+        <path d="M0 320 Q60 280 120 320 T240 320 T360 320 T480 320 T600 320 T720 320 T840 320 T960 320 T1080 320 T1200 320"></path>
+        <path d="M0 360 Q60 320 120 360 T240 360 T360 360 T480 360 T600 360 T720 360 T840 360 T960 360 T1080 360 T1200 360"></path>
+    </g>
+</svg>

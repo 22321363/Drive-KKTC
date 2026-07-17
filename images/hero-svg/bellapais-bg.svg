@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+
+    <g opacity="0.18">
+
+        <!-- Mountains -->
+        <path d="M0 420
+                 L140 240
+                 L250 360
+                 L390 170
+                 L540 340
+                 L700 160
+                 L880 330
+                 L1040 190
+                 L1200 420" fill="none" stroke="#5B8A4D" stroke-width="4"></path>
+
+        <!-- Mountain ridge -->
+        <path d="M0 420
+                 Q150 390 300 405
+                 T600 400
+                 T900 410
+                 T1200 395" fill="none" stroke="#6F9D5A" stroke-width="3"></path>
+
+        <!-- Cypress trees -->
+        <path d="M220 420 L220 340" stroke="#4A7A3C" stroke-width="3"></path>
+        <path d="M210 360 L220 330 L230 360 Z" fill="#4A7A3C"></path>
+        <path d="M212 380 L220 350 L228 380 Z" fill="#4A7A3C"></path>
+        <path d="M214 400 L220 370 L226 400 Z" fill="#4A7A3C"></path>
+
+        <path d="M620 420 L620 330" stroke="#4A7A3C" stroke-width="3"></path>
+        <path d="M610 350 L620 320 L630 350 Z" fill="#4A7A3C"></path>
+        <path d="M612 370 L620 340 L628 370 Z" fill="#4A7A3C"></path>
+        <path d="M614 392 L620 360 L626 392 Z" fill="#4A7A3C"></path>
+
+        <path d="M980 420 L980 345" stroke="#4A7A3C" stroke-width="3"></path>
+        <path d="M970 365 L980 335 L990 365 Z" fill="#4A7A3C"></path>
+        <path d="M972 385 L980 355 L988 385 Z" fill="#4A7A3C"></path>
+        <path d="M974 405 L980 375 L986 405 Z" fill="#4A7A3C"></path>
+
+    </g>
+
+</svg>
